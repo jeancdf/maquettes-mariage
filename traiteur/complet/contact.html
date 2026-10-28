@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Contact — Maison Garance (maquette Complet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../../kit/std.css">
+<style>:root{--pri:#3A2230;--pri-2:#523244;--acc:#B9802A;--soft:#F5F1EC;--ink:#261A20;--muted:#6A5D62;--line:#E6DFD7;--radius:4px;--fd:'Young Serif';--fb:'Instrument Sans';--fdw:400}</style>
+</head>
+<body>
+<div class="topbar wrap"><span><b>Mariages, anniversaires, séminaires</b> · de 20 à 300 invités</span><span><span class="ph">[Ville]</span> · <a href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a></span></div>
+<header class="hd wrap">
+  <a class="logo" href="index.html"><b>Maison Garance</b><small>Traiteur événementiel</small></a>
+  <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a><a href="contact.html" class="on" aria-current="page">Contact</a></nav>
+  <div class="side"><a class="btn sm" href="contact.html#demande">Demander un devis</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i></button></div>
+</header>
+<nav class="mnav" aria-label="Menu mobile"><a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a><a href="contact.html" class="on" aria-current="page">Contact</a><a class="btn" href="contact.html#demande">Demander un devis</a></nav>
+
+<main>
+<section class="ph-head wrap"><div class="crumb"><a href="index.html">Accueil</a> / Contact</div>
+  <h1>Parlons de votre projet</h1><p class="lede">Remplissez le formulaire : nous vous répondons sous 48 h avec une proposition.</p></section>
+<section class="s wrap" style="padding-top:56px"><div class="contact">
+  <div><div class="eyebrow">Coordonnées</div>
+    <h3>Adresse</h3><p><span class="ph">[Adresse du laboratoire]</span><br><span class="ph">[Code postal]</span> <span class="ph">[Ville]</span></p>
+    <h3>Horaires</h3><p>Du lundi au vendredi, de 9 h à 18 h. Dégustations le samedi sur rendez-vous.</p>
+    <h3>Nous joindre</h3><a class="cline" href="tel:+33000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="ph">[00 00 00 00 00]</span></a><a class="cline" href="mailto:contact@nom-du-traiteur.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="ph">[contact@nom-du-traiteur.fr]</span></a><a class="cline" href="#" data-demo="Lien vers le compte Instagram à renseigner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><span class="ph">[@compte-instagram]</span></a>
+    <h3>Zone d’intervention</h3><p><span class="ph">[Ville]</span> et jusqu’à 80 km. Au-delà, frais de déplacement indiqués sur le devis.</p></div>
+  <div id="demande" style="scroll-margin-top:110px"><form class="demo" novalidate>
+        <div class="f"><label for="nom">Nom et prénom</label><input id="nom" name="nom" autocomplete="name" required></div>
+        <div class="f"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div class="f full"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="f"><label for="type">Type d’événement</label><select id="type" name="type"><option>Mariage</option><option>Anniversaire</option><option>Séminaire</option><option>Cocktail d’entreprise</option><option>Autre</option></select></div><div class="f"><label for="date">Date</label><input id="date" name="date" type="date" required></div><div class="f"><label for="invites">Nombre d’invités</label><input id="invites" name="invites" type="number" min="1" inputmode="numeric" placeholder="environ"></div><div class="f"><label for="lieu">Lieu</label><input id="lieu" name="lieu" placeholder="Ville ou nom du lieu"></div><div class="f full"><label for="formule">Formule</label><select id="formule" name="formule"><option value="cocktail">Cocktail dînatoire (32 € / pers.)</option><option value="repas">Repas assis (48 € / pers.)</option><option value="buffet">Buffet et plateaux (22 € / pers.)</option><option value="ne-sait-pas">Je ne sais pas encore</option></select></div>
+        <div class="f full"><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Quelques mots sur votre événement"></textarea></div>
+        <label class="consent full"><input type="checkbox" name="rgpd" required> J’accepte que mes informations soient utilisées pour répondre à ma demande.</label>
+        <button class="btn full" type="submit">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <div class="sent" role="status"><h3>Demande bien reçue</h3><p>Merci, nous revenons vers vous sous 48 h. Voici le récapitulatif :</p><dl></dl>
+        <p class="small">Maquette de démonstration : aucune donnée n’est envoyée.</p><button class="btn line sm" type="button" data-reset>Faire une autre demande</button></div></div>
+</div></section>
+<section class="s soft wrap"><div class="two"><div><div class="eyebrow">Avant d’écrire</div><h2 class="t">Les réponses aux questions courantes</h2></div>
+  <div class="faq"><details><summary>Combien de temps à l’avance faut-il réserver ?</summary><p>6 à 12 mois pour un mariage en saison, 2 à 3 semaines pour un séminaire ou un anniversaire.</p></details><details><summary>Gérez-vous les allergies et régimes particuliers ?</summary><p>Oui : végétarien, sans gluten, sans porc ou allergies, signalés dans votre demande.</p></details><details><summary>Y a-t-il un nombre minimum d’invités ?</summary><p>20 invités pour le cocktail et le repas assis, 10 personnes pour les plateaux-repas.</p></details><p style="margin-top:18px"><a class="link" href="prestations.html#faq">Toutes les questions →</a></p></div></div></section>
+</main>
+<footer class="ft wrap">
+  <div class="top">
+    <div><a class="logo" href="index.html"><b>Maison Garance</b><small>Traiteur événementiel</small></a><p style="margin-top:16px;max-width:290px"><span class="ph">[Ville]</span> et jusqu’à 80 km. Au-delà, frais de déplacement indiqués sur le devis.</p></div>
+    <div><h4>Pages</h4><a class="l" href="index.html">Accueil</a><a class="l" href="prestations.html">Prestations</a><a class="l" href="realisations.html">Réalisations</a><a class="l" href="a-propos.html">À propos</a><a class="l" href="contact.html">Contact</a></div>
+    <div><h4>Horaires</h4><span class="l">Du lundi au vendredi, de 9 h à 18 h. Dégustations le samedi sur rendez-vous.</span></div>
+    <div><h4>Contact</h4><span class="l"><span class="ph">[Adresse du laboratoire]</span></span><a class="l" href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a><a class="l" href="mailto:contact@nom-du-traiteur.fr"><span class="ph">[contact@nom-du-traiteur.fr]</span></a></div>
+  </div>
+  <div class="bot"><span>© <span data-year></span> Maison Garance · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#donnees">Données personnelles</a></span><span class="demo-note">Maquette — établissement fictif, informations illustratives · Réalisation : [votre nom]</span></div>
+</footer>
+<script src="../../kit/std.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Contact — Sonar Events (maquette Complet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..800&display=swap">
+<link rel="stylesheet" href="../../kit/std.css">
+<style>:root{--pri:#161A26;--pri-2:#262C3F;--acc:#C98A2E;--soft:#F2F1EE;--ink:#15171D;--muted:#5C5F6B;--line:#E2E1DC;--radius:6px;--logols:-.01em;--fd:'Archivo';--fb:'Archivo';--fdw:800;--fdls:-.02em}</style>
+</head>
+<body>
+<div class="topbar wrap"><span><b>Sono, lumière et micros inclus</b> · devis sous 24 h</span><span><span class="ph">[Ville]</span> · <a href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a></span></div>
+<header class="hd wrap">
+  <a class="logo" href="index.html"><b>Sonar Events</b><small>DJ et animation</small></a>
+  <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a><a href="contact.html" class="on" aria-current="page">Contact</a></nav>
+  <div class="side"><a class="btn sm" href="contact.html#demande">Vérifier ma date</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i></button></div>
+</header>
+<nav class="mnav" aria-label="Menu mobile"><a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a><a href="contact.html" class="on" aria-current="page">Contact</a><a class="btn" href="contact.html#demande">Vérifier ma date</a></nav>
+
+<main>
+<section class="ph-head wrap"><div class="crumb"><a href="index.html">Accueil</a> / Contact</div>
+  <h1>Parlons de votre projet</h1><p class="lede">Remplissez le formulaire : nous vous répondons sous 48 h avec une proposition.</p></section>
+<section class="s wrap" style="padding-top:56px"><div class="contact">
+  <div><div class="eyebrow">Coordonnées</div>
+    <h3>Adresse</h3><p><span class="ph">[Ville]</span><br><span class="ph">[Code postal]</span> <span class="ph">[Ville]</span></p>
+    <h3>Horaires</h3><p>Réponse aux demandes du lundi au samedi, sous 24 h.</p>
+    <h3>Nous joindre</h3><a class="cline" href="tel:+33000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="ph">[00 00 00 00 00]</span></a><a class="cline" href="mailto:contact@nom-du-dj.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="ph">[contact@nom-du-dj.fr]</span></a><a class="cline" href="#" data-demo="Lien vers le compte Instagram à renseigner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><span class="ph">[@compte-instagram]</span></a>
+    <h3>Zone d’intervention</h3><p><span class="ph">[Ville]</span> et 60 km autour inclus. Au-delà, frais de déplacement indiqués sur le devis.</p></div>
+  <div id="demande" style="scroll-margin-top:110px"><form class="demo" novalidate>
+        <div class="f"><label for="nom">Nom et prénom</label><input id="nom" name="nom" autocomplete="name" required></div>
+        <div class="f"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div class="f full"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="f"><label for="type">Type d’événement</label><select id="type" name="type"><option>Mariage</option><option>Anniversaire</option><option>Soirée d’entreprise</option><option>Séminaire</option><option>Autre</option></select></div><div class="f"><label for="date">Date</label><input id="date" name="date" type="date" required></div><div class="f"><label for="invites">Nombre d’invités</label><input id="invites" name="invites" type="number" min="1" inputmode="numeric" placeholder="environ"></div><div class="f"><label for="lieu">Lieu</label><input id="lieu" name="lieu" placeholder="Ville ou nom du lieu"></div><div class="f full"><label for="formule">Formule</label><select id="formule" name="formule"><option value="soiree">Soirée (890 €)</option><option value="mariage">Mariage complet (1 290 €)</option><option value="entreprise">Événement d’entreprise (990 €)</option><option value="ne-sait-pas">Je ne sais pas encore</option></select></div>
+        <div class="f full"><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Quelques mots sur votre événement"></textarea></div>
+        <label class="consent full"><input type="checkbox" name="rgpd" required> J’accepte que mes informations soient utilisées pour répondre à ma demande.</label>
+        <button class="btn full" type="submit">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <div class="sent" role="status"><h3>Demande bien reçue</h3><p>Merci, nous revenons vers vous sous 48 h. Voici le récapitulatif :</p><dl></dl>
+        <p class="small">Maquette de démonstration : aucune donnée n’est envoyée.</p><button class="btn line sm" type="button" data-reset>Faire une autre demande</button></div></div>
+</div></section>
+<section class="s soft wrap"><div class="two"><div><div class="eyebrow">Avant d’écrire</div><h2 class="t">Les réponses aux questions courantes</h2></div>
+  <div class="faq"><details><summary>Quel matériel apportez-vous ?</summary><p>Sono adaptée à la salle, éclairage de piste, deux micros sans fil et une console de secours.</p></details><details><summary>Peut-on donner une liste de morceaux ?</summary><p>Oui : vos incontournables, et surtout ceux à ne pas passer. On en parle au rendez-vous playlist.</p></details><details><summary>Le lieu impose un limiteur de son, est-ce un problème ?</summary><p>Non, nous réglons la sonorisation en conséquence lors de l’installation.</p></details><p style="margin-top:18px"><a class="link" href="prestations.html#faq">Toutes les questions →</a></p></div></div></section>
+</main>
+<footer class="ft wrap">
+  <div class="top">
+    <div><a class="logo" href="index.html"><b>Sonar Events</b><small>DJ et animation</small></a><p style="margin-top:16px;max-width:290px"><span class="ph">[Ville]</span> et 60 km autour inclus. Au-delà, frais de déplacement indiqués sur le devis.</p></div>
+    <div><h4>Pages</h4><a class="l" href="index.html">Accueil</a><a class="l" href="prestations.html">Prestations</a><a class="l" href="realisations.html">Réalisations</a><a class="l" href="a-propos.html">À propos</a><a class="l" href="contact.html">Contact</a></div>
+    <div><h4>Horaires</h4><span class="l">Réponse aux demandes du lundi au samedi, sous 24 h.</span></div>
+    <div><h4>Contact</h4><span class="l"><span class="ph">[Ville]</span></span><a class="l" href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a><a class="l" href="mailto:contact@nom-du-dj.fr"><span class="ph">[contact@nom-du-dj.fr]</span></a></div>
+  </div>
+  <div class="bot"><span>© <span data-year></span> Sonar Events · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#donnees">Données personnelles</a></span><span class="demo-note">Maquette — établissement fictif, informations illustratives · Réalisation : [votre nom]</span></div>
+</footer>
+<script src="../../kit/std.js"></script>
+</body>
+</html>

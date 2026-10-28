@@ -13,6 +13,7 @@
   html,body{height:100%;overflow:hidden;background:var(--ink);font-family:'Manrope',system-ui,sans-serif}
   .bar{height:var(--bar);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:0 20px;color:#C9CDDD;font-size:13px}
   .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .brand a{text-decoration:none}
   .brand b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-.04em}
   .brand b i{font-style:normal;color:var(--blush)}
   .sector select{appearance:none;-webkit-appearance:none;border:0;border-radius:999px;background:#1F2442 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9CDDD' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center/13px;color:#fff;font:600 13px 'Manrope',system-ui,sans-serif;padding:7px 32px 7px 14px;cursor:pointer}
@@ -23,17 +24,17 @@
   .switch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);background:#1F2442;border-radius:999px;padding:4px}
   .switch .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px) / 3);border-radius:999px;background:#fff;transition:transform .22s cubic-bezier(.3,.7,.2,1)}
   .switch[data-on="complet"] .pill{transform:translateX(100%)}
-  .switch[data-on="mesure"] .pill{transform:translateX(200%)}
-  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 20px;border-radius:999px;display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
+  .switch[data-on="sur-mesure"] .pill{transform:translateX(200%)}
+  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 18px;border-radius:999px;display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
   .switch button b{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em}
   .switch button span{font-size:12.5px;font-weight:600;color:#B8BDD0}
   .switch button[aria-pressed="true"]{color:var(--ink)}
   .switch button[aria-pressed="true"] span{color:var(--cobalt)}
-  .switch button:focus-visible,.sub button:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
-  .sub{display:none;gap:4px}
-  body.sm .sub{display:flex}
-  .sub button{border:1px solid #3A4060;background:none;color:#C9CDDD;font:600 12.5px 'Manrope',sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
-  .sub button[aria-pressed="true"]{background:var(--blush);border-color:var(--blush);color:var(--ink)}
+  .switch button:focus-visible,.trades button:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+  .trades{display:flex;gap:4px}
+  .trades button{border:1px solid #3A4060;background:none;color:#C9CDDD;font:600 12.5px 'Manrope',sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;flex:none}
+  .trades button:hover{color:#fff;border-color:#59607F}
+  .trades button[aria-pressed="true"]{background:var(--blush);border-color:var(--blush);color:var(--ink)}
   .tools{display:flex;justify-content:flex-end;align-items:center;gap:18px;white-space:nowrap}
   .tools kbd{font:600 11px 'Manrope';border:1px solid #3A4060;border-radius:4px;padding:1px 6px;color:#fff}
   .tools a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;gap:6px;align-items:center}
@@ -41,19 +42,26 @@
   .stage{position:relative;height:calc(100% - var(--bar));background:#fff}
   .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;visibility:hidden}
   .stage iframe.on{visibility:visible}
-  @media (max-width:1400px){.hint{display:none}}
-  @media (max-width:1240px){.switch button span{display:none}}
-  @media (max-width:1000px){.brand b{display:none}}
+  @media (max-width:1560px){.hint{display:none}}
+  @media (max-width:1380px){
+    :root{--bar:100px}
+    .bar{grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto;row-gap:8px;align-content:center}
+    .center{display:contents}
+    .switch{grid-column:2;grid-row:1}
+    .trades{grid-column:1/-1;grid-row:2;justify-content:center}
+    .tools{grid-column:3;grid-row:1}
+  }
+  @media (max-width:1000px){.brand b{display:none}.switch button span{display:none}}
   @media (max-width:820px){
-    :root{--bar:96px}
-    body.sm{--bar:132px}
-    .bar{grid-template-columns:1fr;align-content:center;gap:8px;padding:8px 12px}
-    .brand{justify-content:center}
-    .center{flex-direction:column;gap:8px}
-    .tools{display:none}
-    .switch{width:100%;max-width:420px}
+    :root{--bar:140px}
+    .bar{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:8px;padding:8px 12px}
+    .brand{grid-row:1;justify-content:center}
+    .switch{grid-column:1;grid-row:2;width:100%;max-width:420px;justify-self:center}
     .switch button{padding:8px 6px}
     .switch button b{font-size:13.5px}
+    .trades{grid-row:3;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;max-width:100%}
+    .trades::-webkit-scrollbar{display:none}
+    .tools{display:none}
   }
 </style>
 </head>
@@ -65,76 +73,73 @@
       <span class="pill" aria-hidden="true"></span>
       <button data-tier="essentiel" aria-pressed="true"><b>Essentiel</b><span>690 € HT</span></button>
       <button data-tier="complet" aria-pressed="false"><b>Complet</b><span>1 190 € HT</span></button>
-      <button data-tier="mesure" aria-pressed="false"><b>Sur mesure</b><span>1 990 – 2 990 € HT</span></button>
+      <button data-tier="sur-mesure" aria-pressed="false"><b>Sur mesure</b><span>1 990 – 2 990 € HT</span></button>
     </div>
-    <div class="sub" role="group" aria-label="Choisir l’exemple sur mesure">
-      <button data-id="alba" aria-pressed="false">Photographe</button>
-      <button data-id="tilleuls" aria-pressed="false">Domaine</button>
-      <button data-id="nocturne" aria-pressed="false">DJ</button>
+    <div class="trades" role="group" aria-label="Choisir le métier">
+      <button data-trade="planner" aria-pressed="true">Wedding planner</button>
+      <button data-trade="photographe" aria-pressed="false">Photographe</button>
+      <button data-trade="lieu" aria-pressed="false">Lieu de réception</button>
+      <button data-trade="dj" aria-pressed="false">DJ</button>
+      <button data-trade="traiteur" aria-pressed="false">Traiteur</button>
     </div>
   </div>
   <div class="tools">
-    <span class="hint">Touches <kbd>1</kbd> à <kbd>5</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
-    <a id="solo" href="essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
+    <span class="hint">Touches <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> · métier <kbd>←</kbd> <kbd>→</kbd></span>
+    <a id="solo" href="planner/essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
   </div>
 </div>
-<div class="stage">
-  <iframe id="f-essentiel" class="on" src="essentiel.html" title="Formule Essentiel"></iframe>
-  <iframe id="f-complet" src="complet.html" title="Formule Complet" loading="eager"></iframe>
-  <iframe id="f-alba" src="alba.html" title="Sur mesure — Studio Alba" loading="eager"></iframe>
-  <iframe id="f-tilleuls" src="tilleuls.html" title="Sur mesure — Domaine des Tilleuls" loading="eager"></iframe>
-  <iframe id="f-nocturne" src="nocturne.html" title="Sur mesure — Nocturne" loading="eager"></iframe>
-</div>
+<div class="stage" id="stage"></div>
 <script>
-  const ids = ['essentiel', 'complet', 'alba', 'tilleuls', 'nocturne'];
-  const custom = ['alba', 'tilleuls', 'nocturne'];
-  const sw = document.querySelector('.switch');
-  const solo = document.getElementById('solo');
-  let lastCustom = 'alba';
+  // une page par métier et par formule ; les cadres sont créés à la première ouverture
+  const SM = { planner: 'sillage', photographe: 'alba', lieu: 'tilleuls', dj: 'nocturne', traiteur: 'oree' };
+  const TRADES = Object.keys(SM), TIERS = ['essentiel', 'complet', 'sur-mesure'];
+  const NAMES = { planner: 'Wedding planner', photographe: 'Photographe', lieu: 'Lieu de réception', dj: 'DJ', traiteur: 'Traiteur' };
+  const LEGACY = { essentiel: 'planner-essentiel', complet: 'planner-complet', alba: 'photographe-sur-mesure', tilleuls: 'lieu-sur-mesure', nocturne: 'dj-sur-mesure' };
+  const url = (t, tier) => tier === 'essentiel' ? `${t}/essentiel.html` : tier === 'complet' ? `${t}/complet/index.html` : `${t}/${SM[t]}.html`;
+  const stage = document.getElementById('stage'), sw = document.querySelector('.switch'), solo = document.getElementById('solo');
+  let trade = 'planner', tier = 'essentiel';
 
-  function show(id) {
-    if (!ids.includes(id)) id = ids[0];
-    const tier = custom.includes(id) ? 'mesure' : id;
-    if (tier === 'mesure') lastCustom = id;
-    ids.forEach(k => document.getElementById('f-' + k).classList.toggle('on', k === id));
-    sw.querySelectorAll('[data-tier]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tier === tier));
-    document.querySelectorAll('.sub [data-id]').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === id));
-    document.body.classList.toggle('sm', tier === 'mesure');
-    sw.dataset.on = tier;
-    solo.href = id + '.html';
-    history.replaceState(null, '', '#' + id);
+  function frame(t, ti) {
+    const id = `f-${t}-${ti}`;
+    let f = document.getElementById(id);
+    if (!f) {
+      f = document.createElement('iframe'); f.id = id; f.src = url(t, ti); f.title = `${NAMES[t]} — ${ti}`;
+      f.addEventListener('load', () => { try { f.contentWindow.addEventListener('keydown', onKey); } catch (_) {} });
+      stage.append(f);
+    }
+    return f;
   }
-
+  function show(t, ti) {
+    trade = TRADES.includes(t) ? t : 'planner'; tier = TIERS.includes(ti) ? ti : 'essentiel';
+    const cur = frame(trade, tier);
+    [...stage.children].forEach(f => f.classList.toggle('on', f === cur));
+    sw.querySelectorAll('[data-tier]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tier === tier));
+    document.querySelectorAll('[data-trade]').forEach(b => b.setAttribute('aria-pressed', b.dataset.trade === trade));
+    document.querySelector(`[data-trade=${trade}]`).scrollIntoView({ inline: 'nearest', block: 'nearest' });
+    sw.dataset.on = tier;
+    solo.href = url(trade, tier);
+    history.replaceState(null, '', `#${trade}-${tier}`);
+    // précharge les deux autres formules du métier
+    setTimeout(() => TIERS.forEach(x => frame(trade, x)), 600);
+  }
   function onKey(e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
-    const cur = document.querySelector('.stage iframe.on').id.slice(2);
-    const i = ids.indexOf(cur);
-    if (e.key >= '1' && e.key <= String(ids.length)) show(ids[e.key - 1]);
-    else if (e.key === 'ArrowRight') show(ids[(i + 1) % ids.length]);
-    else if (e.key === 'ArrowLeft') show(ids[(i + ids.length - 1) % ids.length]);
+    const el = e.target;
+    if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return; // on tape dans un formulaire
+    const i = TRADES.indexOf(trade);
+    if (e.key >= '1' && e.key <= '3') show(trade, TIERS[e.key - 1]);
+    else if (e.key === 'ArrowRight') show(TRADES[(i + 1) % TRADES.length], tier);
+    else if (e.key === 'ArrowLeft') show(TRADES[(i + TRADES.length - 1) % TRADES.length], tier);
     else return;
     e.preventDefault();
   }
-
-  sw.addEventListener('click', e => {
-    const b = e.target.closest('button');
-    if (b) show(b.dataset.tier === 'mesure' ? lastCustom : b.dataset.tier);
-  });
-  document.querySelector('.sub').addEventListener('click', e => {
-    const b = e.target.closest('button');
-    if (b) show(b.dataset.id);
-  });
+  sw.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(trade, b.dataset.tier); });
+  document.querySelector('.trades').addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(b.dataset.trade, tier); });
   document.addEventListener('keydown', onKey);
-  // les raccourcis marchent aussi quand le focus est dans une maquette
-  ids.forEach(k => {
-    const f = document.getElementById('f-' + k);
-    f.addEventListener('load', () => {
-      try { f.contentWindow.addEventListener('keydown', onKey); } catch (_) {}
-    });
-  });
 
-  show(location.hash.slice(1));
-
+  let h = location.hash.slice(1); h = LEGACY[h] || h;
+  const m = h.match(/^([a-z]+)-(essentiel|complet|sur-mesure)$/);
+  show(m ? m[1] : 'planner', m ? m[2] : 'essentiel');
 </script>
 </body>
 </html>

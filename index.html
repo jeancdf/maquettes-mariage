@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Maquettes — prestataires de mariage et d’événementiel</title>
+<title>Maquettes — mariage et événementiel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@500..800&display=swap">
 <style>
@@ -51,6 +51,10 @@
     .intro{padding:32px 0 28px}
     .grid{grid-template-columns:1fr}
   }
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .jump a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px;color:#fff}
+  .jump a:hover{border-color:var(--blush);color:var(--blush)}
+  .tier{scroll-margin-top:16px}
 </style>
 </head>
 <body>
@@ -60,55 +64,151 @@
   <a class="btn" href="comparer.html">Comparer les formules <span aria-hidden="true">→</span></a>
 </header>
 <section class="intro">
-  <h1>Sites vitrines pour prestataires de mariage et d’événementiel</h1>
-  <p>Trois formules, de la page unique au site sur mesure. Chaque modèle s’ouvre en plein écran, sur ordinateur comme sur téléphone.</p>
+  <h1>Sites vitrines pour le mariage et l’événementiel</h1>
+  <p>Cinq métiers, chacun avec ses trois formules : Essentiel, Complet et Sur mesure. Tous les boutons et formulaires fonctionnent (démonstration : rien n’est envoyé).</p>
+  <nav class="jump" aria-label="Métiers"><a href="#planner">Wedding planner</a><a href="#photographe">Photographe</a><a href="#lieu">Lieu de réception</a><a href="#dj">DJ et animation</a><a href="#traiteur">Traiteur</a></nav>
 </section>
-<section class="tier">
-  <div class="tier-head"><h2>Essentiel et Complet</h2><p>Le même établissement fictif, Maison Joséphine, pour comparer les deux gammes.</p></div>
+<section class="tier" id="planner">
+  <div class="tier-head"><h2>Wedding planner</h2><p>Essentiel et Complet : Maison Joséphine · Sur mesure : Sillage</p></div>
   <div class="grid">
     <article class="card">
-      <a class="shot" href="essentiel.html" style="background-image:url(vignettes/essentiel.jpg)" aria-label="Ouvrir Essentiel"></a>
+      <a class="shot" href="planner/essentiel.html" style="background-image:url(vignettes/planner-essentiel.jpg)" aria-label="Ouvrir Wedding planner Essentiel"></a>
       <div class="body">
         <h3>Essentiel<span>690 € HT</span></h3>
-        <p>Une page : présentation, prestations et prix, horaires, contact.</p>
-        <div class="links"><a href="essentiel.html">Ouvrir la page</a><a href="comparer.html#essentiel">Dans le comparateur</a></div>
+        <p>Maison Joséphine. Une page : formules et prix, infos pratiques, formulaire de demande.</p>
+        <div class="links"><a href="planner/essentiel.html">Ouvrir le site</a><a href="comparer.html#planner-essentiel">Dans le comparateur</a></div>
       </div>
     </article>
     <article class="card">
-      <a class="shot" href="complet.html" style="background-image:url(vignettes/complet.jpg)" aria-label="Ouvrir Complet"></a>
+      <a class="shot" href="planner/complet/index.html" style="background-image:url(vignettes/planner-complet.jpg)" aria-label="Ouvrir Wedding planner Complet"></a>
       <div class="body">
         <h3>Complet<span>1 190 € HT</span></h3>
-        <p>Cinq pages, accueil présenté : demande en ligne, prestations détaillées, galerie, infos pratiques.</p>
-        <div class="links"><a href="complet.html">Ouvrir la page</a><a href="comparer.html#complet">Dans le comparateur</a></div>
+        <p>Maison Joséphine. Cinq pages : accueil, prestations, réalisations, à propos, contact. Vérification de date ou estimation en ligne.</p>
+        <div class="links"><a href="planner/complet/index.html">Ouvrir le site</a><a href="comparer.html#planner-complet">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="planner/sillage.html" style="background-image:url(vignettes/planner-sur-mesure.jpg)" aria-label="Ouvrir Wedding planner sur mesure"></a>
+      <div class="body">
+        <h3>Sur mesure<span>1 990 – 2 990 € HT</span></h3>
+        <p>Sillage. Wedding planner sur les lacs alpins : simulateur de budget, types de lieux, prise de rendez-vous avec créneaux.</p>
+        <div class="links"><a href="planner/sillage.html">Ouvrir le site</a><a href="comparer.html#planner-sur-mesure">Dans le comparateur</a></div>
       </div>
     </article>
   </div>
 </section>
-<section class="tier">
-  <div class="tier-head"><h2>Sur mesure<span>1 990 – 2 990 € HT</span></h2><p>Identité, textes et parcours dessinés pour un établissement, avec une version mobile dédiée.</p></div>
+<section class="tier" id="photographe">
+  <div class="tier-head"><h2>Photographe</h2><p>Essentiel et Complet : Studio Héliotrope · Sur mesure : Studio Alba</p></div>
   <div class="grid">
     <article class="card">
-      <a class="shot" href="alba.html" style="background-image:url(vignettes/alba.jpg)" aria-label="Ouvrir Studio Alba"></a>
+      <a class="shot" href="photographe/essentiel.html" style="background-image:url(vignettes/photographe-essentiel.jpg)" aria-label="Ouvrir Photographe Essentiel"></a>
       <div class="body">
-        <h3>Studio Alba<span></span></h3>
-        <p>Photographe de mariage, Lyon. Galeries par reportage et formules.</p>
-        <div class="links"><a href="alba.html">Ouvrir la page</a><a href="comparer.html#alba">Dans le comparateur</a></div>
+        <h3>Essentiel<span>690 € HT</span></h3>
+        <p>Studio Héliotrope. Une page : formules et prix, infos pratiques, formulaire de demande.</p>
+        <div class="links"><a href="photographe/essentiel.html">Ouvrir le site</a><a href="comparer.html#photographe-essentiel">Dans le comparateur</a></div>
       </div>
     </article>
     <article class="card">
-      <a class="shot" href="tilleuls.html" style="background-image:url(vignettes/tilleuls.jpg)" aria-label="Ouvrir Domaine des Tilleuls"></a>
+      <a class="shot" href="photographe/complet/index.html" style="background-image:url(vignettes/photographe-complet.jpg)" aria-label="Ouvrir Photographe Complet"></a>
       <div class="body">
-        <h3>Domaine des Tilleuls<span></span></h3>
-        <p>Lieu de réception, Anjou. Espaces, capacités et visite du domaine.</p>
-        <div class="links"><a href="tilleuls.html">Ouvrir la page</a><a href="comparer.html#tilleuls">Dans le comparateur</a></div>
+        <h3>Complet<span>1 190 € HT</span></h3>
+        <p>Studio Héliotrope. Cinq pages : accueil, prestations, réalisations, à propos, contact. Vérification de date ou estimation en ligne.</p>
+        <div class="links"><a href="photographe/complet/index.html">Ouvrir le site</a><a href="comparer.html#photographe-complet">Dans le comparateur</a></div>
       </div>
     </article>
     <article class="card">
-      <a class="shot" href="nocturne.html" style="background-image:url(vignettes/nocturne.jpg)" aria-label="Ouvrir Nocturne"></a>
+      <a class="shot" href="photographe/alba.html" style="background-image:url(vignettes/photographe-sur-mesure.jpg)" aria-label="Ouvrir Photographe sur mesure"></a>
       <div class="body">
-        <h3>Nocturne<span></span></h3>
-        <p>DJ mariage, Marseille. Formules, matériel et demande de date.</p>
-        <div class="links"><a href="nocturne.html">Ouvrir la page</a><a href="comparer.html#nocturne">Dans le comparateur</a></div>
+        <h3>Sur mesure<span>1 990 – 2 990 € HT</span></h3>
+        <p>Studio Alba. Photographe à Lyon en noir et blanc : vérification de date, tarifs, demande en ligne.</p>
+        <div class="links"><a href="photographe/alba.html">Ouvrir le site</a><a href="comparer.html#photographe-sur-mesure">Dans le comparateur</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="tier" id="lieu">
+  <div class="tier-head"><h2>Lieu de réception</h2><p>Essentiel et Complet : La Grange des Aulnes · Sur mesure : Domaine des Tilleuls</p></div>
+  <div class="grid">
+    <article class="card">
+      <a class="shot" href="lieu/essentiel.html" style="background-image:url(vignettes/lieu-essentiel.jpg)" aria-label="Ouvrir Lieu de réception Essentiel"></a>
+      <div class="body">
+        <h3>Essentiel<span>690 € HT</span></h3>
+        <p>La Grange des Aulnes. Une page : formules et prix, infos pratiques, formulaire de demande.</p>
+        <div class="links"><a href="lieu/essentiel.html">Ouvrir le site</a><a href="comparer.html#lieu-essentiel">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="lieu/complet/index.html" style="background-image:url(vignettes/lieu-complet.jpg)" aria-label="Ouvrir Lieu de réception Complet"></a>
+      <div class="body">
+        <h3>Complet<span>1 190 € HT</span></h3>
+        <p>La Grange des Aulnes. Cinq pages : accueil, prestations, réalisations, à propos, contact. Vérification de date ou estimation en ligne.</p>
+        <div class="links"><a href="lieu/complet/index.html">Ouvrir le site</a><a href="comparer.html#lieu-complet">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="lieu/tilleuls.html" style="background-image:url(vignettes/lieu-sur-mesure.jpg)" aria-label="Ouvrir Lieu de réception sur mesure"></a>
+      <div class="body">
+        <h3>Sur mesure<span>1 990 – 2 990 € HT</span></h3>
+        <p>Domaine des Tilleuls. Château en Anjou : calendrier des samedis libres, option sur une date, brochure, visite.</p>
+        <div class="links"><a href="lieu/tilleuls.html">Ouvrir le site</a><a href="comparer.html#lieu-sur-mesure">Dans le comparateur</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="tier" id="dj">
+  <div class="tier-head"><h2>DJ et animation</h2><p>Essentiel et Complet : Sonar Events · Sur mesure : Nocturne</p></div>
+  <div class="grid">
+    <article class="card">
+      <a class="shot" href="dj/essentiel.html" style="background-image:url(vignettes/dj-essentiel.jpg)" aria-label="Ouvrir DJ et animation Essentiel"></a>
+      <div class="body">
+        <h3>Essentiel<span>690 € HT</span></h3>
+        <p>Sonar Events. Une page : formules et prix, infos pratiques, formulaire de demande.</p>
+        <div class="links"><a href="dj/essentiel.html">Ouvrir le site</a><a href="comparer.html#dj-essentiel">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="dj/complet/index.html" style="background-image:url(vignettes/dj-complet.jpg)" aria-label="Ouvrir DJ et animation Complet"></a>
+      <div class="body">
+        <h3>Complet<span>1 190 € HT</span></h3>
+        <p>Sonar Events. Cinq pages : accueil, prestations, réalisations, à propos, contact. Vérification de date ou estimation en ligne.</p>
+        <div class="links"><a href="dj/complet/index.html">Ouvrir le site</a><a href="comparer.html#dj-complet">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="dj/nocturne.html" style="background-image:url(vignettes/dj-sur-mesure.jpg)" aria-label="Ouvrir DJ et animation sur mesure"></a>
+      <div class="body">
+        <h3>Sur mesure<span>1 990 – 2 990 € HT</span></h3>
+        <p>Nocturne. DJ en Provence : formules tout compris, matériel, vérification de date, écoute d’un mix.</p>
+        <div class="links"><a href="dj/nocturne.html">Ouvrir le site</a><a href="comparer.html#dj-sur-mesure">Dans le comparateur</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="tier" id="traiteur">
+  <div class="tier-head"><h2>Traiteur</h2><p>Essentiel et Complet : Maison Garance · Sur mesure : Orée</p></div>
+  <div class="grid">
+    <article class="card">
+      <a class="shot" href="traiteur/essentiel.html" style="background-image:url(vignettes/traiteur-essentiel.jpg)" aria-label="Ouvrir Traiteur Essentiel"></a>
+      <div class="body">
+        <h3>Essentiel<span>690 € HT</span></h3>
+        <p>Maison Garance. Une page : formules et prix, infos pratiques, formulaire de demande.</p>
+        <div class="links"><a href="traiteur/essentiel.html">Ouvrir le site</a><a href="comparer.html#traiteur-essentiel">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="traiteur/complet/index.html" style="background-image:url(vignettes/traiteur-complet.jpg)" aria-label="Ouvrir Traiteur Complet"></a>
+      <div class="body">
+        <h3>Complet<span>1 190 € HT</span></h3>
+        <p>Maison Garance. Cinq pages : accueil, prestations, réalisations, à propos, contact. Vérification de date ou estimation en ligne.</p>
+        <div class="links"><a href="traiteur/complet/index.html">Ouvrir le site</a><a href="comparer.html#traiteur-complet">Dans le comparateur</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="traiteur/oree.html" style="background-image:url(vignettes/traiteur-sur-mesure.jpg)" aria-label="Ouvrir Traiteur sur mesure"></a>
+      <div class="body">
+        <h3>Sur mesure<span>1 990 – 2 990 € HT</span></h3>
+        <p>Orée. Traiteur à Nantes : devis composé en ligne (événement, invités, format, options), menus de saison, plateaux-repas.</p>
+        <div class="links"><a href="traiteur/oree.html">Ouvrir le site</a><a href="comparer.html#traiteur-sur-mesure">Dans le comparateur</a></div>
       </div>
     </article>
   </div>

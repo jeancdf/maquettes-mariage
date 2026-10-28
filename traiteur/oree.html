@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Orée — traiteur événementiel, Nantes (maquette sur mesure)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..600&family=Onest:wght@400..700&display=swap">
+<style>
+:root{--night:#171A15;--night-2:#22261F;--cream:#F1EADB;--cream-2:#E4DBC8;--copper:#C9853C;--copper-d:#86501A;--sage:#8C9A7B;--ink:#1D201A;--muted:#5F6457;--line:#DADCD3;--bg:#F3F4F0;--gut:max(22px,calc((100vw - 1300px) / 2))}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Onest',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.w{padding-left:var(--gut);padding-right:var(--gut)}
+h1,h2,h3,.serif{font-family:'Newsreader',Georgia,serif;font-weight:500;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.4vw,58px);line-height:1.02}
+h2 em{font-style:italic;color:var(--copper-d)}
+.lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--copper-d)}
+.muted{color:var(--muted)}
+.small{font-size:13.5px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--copper);color:var(--night);border:1px solid var(--copper);border-radius:4px;padding:14px 24px;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap;transition:filter .2s,background .2s,color .2s}
+.btn:hover{filter:brightness(1.08)}
+.btn.d{background:var(--night);border-color:var(--night);color:var(--cream)}
+.btn.d:hover{background:var(--night-2)}
+.btn.o{background:transparent;color:var(--night);border-color:var(--night)}
+.btn.o:hover{background:var(--night);color:var(--cream)}
+.btn.oc{background:transparent;color:var(--cream);border-color:rgba(241,234,219,.5)}
+.btn.oc:hover{background:rgba(241,234,219,.1)}
+.btn svg{width:16px;height:16px}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+
+header{position:sticky;top:0;z-index:40;background:var(--night);color:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:30px;height:30px;color:var(--copper)}
+.logo b{font-family:'Newsreader';font-weight:500;font-size:28px;line-height:1}
+.logo span{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:600}
+header nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+header nav a{color:#D7D0C0}
+header nav a:hover,header nav a.on{color:var(--copper)}
+.burger{display:none;width:44px;height:44px;border:1px solid rgba(241,234,219,.35);background:none;border-radius:4px;cursor:pointer;align-items:center;justify-content:center;color:var(--cream)}
+.burger i,.burger i::before,.burger i::after{display:block;width:17px;height:2px;background:currentColor;position:relative;transition:transform .2s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0}.burger i::before{top:-6px}.burger i::after{top:6px}
+.menu-open .burger i{background:transparent}.menu-open .burger i::before{transform:translateY(6px) rotate(45deg)}.menu-open .burger i::after{transform:translateY(-6px) rotate(-45deg)}
+.mnav{display:none}
+
+/* hero */
+.hero{background:var(--night);color:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:56px;padding-top:56px;padding-bottom:80px;align-items:center}
+.hero h1{font-size:clamp(44px,5.8vw,84px);line-height:.98;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--copper)}
+.hero p{font-size:19px;color:#CFC7B6;max-width:540px}
+.quick{margin-top:34px}
+.quick .small{color:#A9A493;margin-bottom:10px}
+.quick div{display:flex;flex-wrap:wrap;gap:8px}
+.quick button{background:transparent;border:1px solid rgba(241,234,219,.35);color:var(--cream);border-radius:4px;padding:11px 16px;font-weight:600;cursor:pointer}
+.quick button:hover{border-color:var(--copper);color:var(--copper)}
+.collage{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:250px 250px;gap:10px}
+.collage div{background:center/cover;border-radius:4px}
+.collage div:first-child{grid-row:span 2}
+.facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:36px;padding-top:22px;border-top:1px solid rgba(241,234,219,.15);font-size:14px;color:#A9A493}
+.facts b{display:block;font-family:'Newsreader';font-weight:500;font-size:24px;color:var(--cream)}
+
+section{padding-top:100px;padding-bottom:100px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px}
+.head p{max-width:440px;color:var(--muted)}
+
+/* configurateur */
+#devis{background:var(--bg)}
+.cfg{display:grid;grid-template-columns:1.35fr .65fr;gap:36px;align-items:start}
+.stepb{background:#fff;border-radius:6px;padding:26px 28px;margin-bottom:14px}
+.stepb h3{font-size:26px;display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.stepb h3 i{font-style:normal;font-family:'Onest';font-size:13px;font-weight:700;color:#fff;background:var(--night);border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip>span{display:block;height:100%;border:1px solid var(--line);border-radius:6px;padding:14px 14px;font-weight:600;transition:all .15s}
+.chip>span small{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:2px}
+.chip input:checked+span{border-color:var(--night);background:var(--night);color:var(--cream)}
+.chip input:checked+span small{color:#B9B3A2}
+.chip input:focus-visible+span{outline:2px solid var(--copper);outline-offset:2px}
+.chip input:disabled+span{opacity:.4;cursor:not-allowed}
+.fmt{grid-template-columns:repeat(2,1fr)}
+.fmt .chip>span{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:10px}
+.fmt .chip>span>span:first-child{width:72px;height:60px;border-radius:4px;background:center/cover}
+.fmt .chip b{font-family:'Newsreader';font-weight:500;font-size:20px;display:block;line-height:1.1}
+.fmt .chip em{font-style:normal;font-weight:700;white-space:nowrap}
+.stepper{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.stepper button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:22px;cursor:pointer;line-height:1}
+.stepper button:hover{border-color:var(--night)}
+.stepper input{width:110px;text-align:center;font-family:'Newsreader';font-size:38px;border:0;border-bottom:2px solid var(--night);background:transparent;padding:2px 0}
+.stepper .small{margin-left:6px}
+.optl{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.optl label{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:12px 14px;cursor:pointer}
+.optl input{margin-top:4px;accent-color:var(--night)}
+.optl small{display:block;color:var(--muted);font-size:13px}
+.warn{display:none;margin-top:10px;font-size:14px;color:#8A3B22}
+.warn.on{display:block}
+
+.sum{position:sticky;top:96px;background:var(--night);color:var(--cream);border-radius:6px;padding:28px 26px}
+.sum h3{font-size:28px}
+.sum ul{list-style:none;margin:16px 0;border-top:1px solid rgba(241,234,219,.15)}
+.sum li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(241,234,219,.1);font-size:14.5px;color:#CFC7B6}
+.sum li b{color:var(--cream);font-weight:600;white-space:nowrap}
+.sum .tot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:6px}
+.sum .tot span{color:#A9A493;font-size:14px}
+.sum .tot b{font-family:'Newsreader';font-weight:500;font-size:44px;color:var(--copper);line-height:1}
+.sum .pp{text-align:right;color:#A9A493;font-size:14px;margin-top:4px}
+.sum .btn{width:100%;margin-top:20px}
+.sum .small{color:#A9A493;margin-top:12px}
+.send{display:none;background:#fff;border-radius:6px;padding:26px 28px;margin-top:14px;border:2px solid var(--night)}
+.send.on{display:block}
+.send form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.send .full{grid-column:1/-1}
+.f label{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;border:1px solid var(--line);border-radius:4px;background:#fff;padding:12px 14px;font-size:15px;outline:none}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--night)}
+.f textarea{min-height:90px;resize:vertical}
+.consent{display:flex;gap:10px;font-size:13.5px;color:var(--muted)}
+.consent input{margin-top:3px;accent-color:var(--night)}
+.done{display:none;background:#fff;border-radius:6px;padding:30px 28px;margin-top:14px;border-left:4px solid var(--copper)}
+.done.on{display:block}
+.done h3{font-size:30px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:16px 0;font-size:15px}
+.done dt{color:var(--muted)}
+
+/* menus */
+#menus{background:#fff}
+.seasons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;align-items:center}
+.seasons [role=tab]{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-weight:600;cursor:pointer}
+.seasons [role=tab][aria-selected=true]{background:var(--night);color:var(--cream);border-color:var(--night)}
+.seasons label{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:14.5px;cursor:pointer}
+.seasons label input{accent-color:var(--night);width:18px;height:18px}
+.menus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.menus[hidden]{display:none}
+.menu{border:1px solid var(--line);border-radius:6px;padding:26px 24px}
+.menu h3{font-size:26px}
+.menu .pr{color:var(--copper-d);font-weight:700;margin:4px 0 14px}
+.menu ul{list-style:none;border-top:1px solid var(--line)}
+.menu li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.menu li small{display:none;color:var(--muted);font-size:12.5px;margin-top:2px}
+.show-al .menu li small{display:block}
+.menu .btn{margin-top:18px;width:100%}
+
+/* entreprises */
+#entreprises{background:var(--night);color:var(--cream)}
+#entreprises .lbl{color:var(--copper)}
+#entreprises .head p{color:#B9B3A2}
+.ent{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ent .img{min-height:420px;background:center/cover;border-radius:6px}
+.trays{background:var(--night-2);border-radius:6px;padding:24px}
+.tray{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(241,234,219,.12)}
+.tray b{font-family:'Newsreader';font-weight:500;font-size:20px;display:block}
+.tray small{color:#A9A493;font-size:13.5px}
+.tray .q{display:flex;align-items:center;gap:8px}
+.tray .q button{width:34px;height:34px;border-radius:50%;border:1px solid rgba(241,234,219,.35);background:none;color:var(--cream);cursor:pointer;font-size:18px;line-height:1}
+.tray .q output{min-width:26px;text-align:center;font-weight:700}
+.tray em{font-style:normal;color:var(--copper);font-weight:700;min-width:60px;text-align:right}
+.trays .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-top:18px}
+.trays .row .f{flex:1;min-width:160px}
+.trays .row .f label{color:#B9B3A2}
+.trays .row .f input{background:transparent;border-color:rgba(241,234,219,.3);color:var(--cream);color-scheme:dark}
+.trays .tt{font-family:'Newsreader';font-size:30px;color:var(--copper)}
+.trays .ok{display:none;margin-top:16px;background:rgba(201,133,60,.15);border-radius:4px;padding:14px 16px}
+.trays .ok.on{display:block}
+
+/* galerie, étapes, faq */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;grid-auto-flow:dense;gap:10px}
+.gal figure{position:relative;margin:0;background:center/cover;border-radius:4px;cursor:zoom-in;overflow:hidden}
+.gal figure.t{grid-row:span 2}.gal figure.l{grid-column:span 2}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;color:#fff;font-size:13.5px;background:linear-gradient(transparent,rgba(10,12,9,.75))}
+.gal figcaption b{display:block;font-family:'Newsreader';font-weight:500;font-size:18px}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.how div{border-top:2px solid var(--night);padding-top:16px}
+.how i{font-style:normal;font-family:'Newsreader';font-size:40px;color:var(--copper-d);line-height:1}
+.how h3{font-size:22px;margin:10px 0 6px}
+.how p{font-size:15px;color:var(--muted)}
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;margin-top:90px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--copper-d);font-size:24px;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:18px;color:var(--muted)}
+
+#contact{background:#fff}
+.ct{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ct div{border-top:1px solid var(--line);padding-top:16px}
+.ct h3{font-size:22px;margin-bottom:6px}
+.ct a{display:block;padding:3px 0;text-decoration:underline;text-underline-offset:3px}
+.ct a:hover{color:var(--copper-d)}
+footer{background:var(--night);color:#A9A493;padding-top:30px;padding-bottom:30px;font-size:13.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
+footer details summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px;display:inline}
+footer details p{margin-top:8px;max-width:720px}
+.ph{border:1px dashed currentColor;border-radius:3px;padding:0 5px;white-space:nowrap;opacity:.9}
+.mbar{display:none}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,12,9,.95);display:none;align-items:center;justify-content:center;padding:60px 70px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+.lb .cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#ddd;font-size:14px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:22px}
+.lb .x{top:16px;right:16px}.lb .pv{left:14px;top:50%;margin-top:-24px}.lb .nx{right:14px;top:50%;margin-top:-24px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);opacity:0;background:var(--night);color:var(--cream);padding:12px 20px;border-radius:4px;font-size:14.5px;z-index:120;transition:all .25s;pointer-events:none;max-width:calc(100vw - 32px)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1100px){
+  header nav,header .btn{display:none}
+  .burger{display:inline-flex}
+  .mnav{position:fixed;inset:var(--hd-h,72px) 0 0 0;z-index:39;background:var(--night);color:var(--cream);padding:24px var(--gut);flex-direction:column}
+  .menu-open .mnav{display:flex}
+  .mnav a{font-family:'Newsreader';font-size:32px;padding:10px 0;border-bottom:1px solid rgba(241,234,219,.12)}
+  .mnav .btn{margin-top:22px;font-family:'Onest';font-size:16px}
+  .hero,.cfg,.ent,.faq{grid-template-columns:1fr}
+  .sum{position:static}
+  .menus{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .how{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  body{padding-bottom:76px}
+  section{padding-top:64px;padding-bottom:64px}
+  .head{display:block;margin-bottom:28px}.head p{margin-top:12px}
+  .logo span{display:none}
+  .hero{padding-top:32px;padding-bottom:56px;gap:30px}
+  .collage{grid-template-rows:170px 170px}
+  .chips{grid-template-columns:1fr 1fr}
+  .fmt,.optl{grid-template-columns:1fr}
+  .stepb{padding:20px 18px}
+  .send form{grid-template-columns:1fr}
+  .menus,.how,.ct{grid-template-columns:1fr}
+  .seasons label{margin-left:0}
+  .ent .img{min-height:240px}
+  .tray{grid-template-columns:1fr auto;row-gap:6px}
+  .tray em{grid-column:2;grid-row:1}
+  .tray .q{grid-column:1/-1}
+  .gal{grid-auto-rows:170px}
+  .gal figure.l{grid-column:span 2}
+  .faq{margin-top:60px;gap:20px}
+  .mbar{display:grid;grid-template-columns:auto 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:35;background:var(--night);padding:10px 12px max(10px,env(safe-area-inset-bottom))}
+  .mbar .btn{padding:13px 16px}
+  .lb{padding:56px 10px}
+}
+</style>
+</head>
+<body>
+<header class="hd w">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 22h24M7 22a9 9 0 0 1 18 0M16 9v4M13 9h6"/></svg><span><b>Orée</b><span>Traiteur · Nantes</span></span></a>
+  <nav aria-label="Navigation principale"><a href="#devis">Devis</a><a href="#menus">Menus</a><a href="#entreprises">Entreprises</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a></nav>
+  <div style="display:flex;gap:10px;align-items:center"><a class="btn" href="#devis">Composer mon devis</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i></button></div>
+</header>
+<nav class="mnav" aria-label="Menu mobile"><a href="#devis">Composer mon devis</a><a href="#menus">Menus de saison</a><a href="#entreprises">Entreprises</a><a href="#realisations">Réalisations</a><a href="#contact">Contact</a><a class="btn" href="tel:+33000000000">Appeler</a></nav>
+
+<main id="top">
+<section class="hero w">
+  <div>
+    <h1>Traiteur pour mariages, anniversaires et séminaires à Nantes</h1>
+    <p>Cocktails, repas assis, buffets et plateaux-repas, cuisinés avec les produits de saison de Loire-Atlantique. Composez votre devis en ligne : réponse sous 48 h.</p>
+    <div class="quick"><p class="small">Votre événement :</p><div>
+      <button type="button" data-ev="mariage">Mariage</button><button type="button" data-ev="anniversaire">Anniversaire</button><button type="button" data-ev="seminaire">Séminaire</button><button type="button" data-ev="entreprise">Soirée d’entreprise</button></div></div>
+    <div class="facts"><div><b>20 à 400</b>invités</div><div><b>48 h</b>pour recevoir le devis</div><div><b>60 km</b>autour de Nantes</div></div>
+  </div>
+  <div class="collage"><div style="background-image:url(../img/o-chandelles.jpg)"></div><div style="background-image:url(../img/o-dressage.jpg)"></div><div style="background-image:url(../img/o-coupes.jpg)"></div></div>
+</section>
+
+<section class="w" id="devis">
+  <div class="head"><div><div class="lbl">Devis en ligne</div><h2>Composez votre réception, le prix s’affiche</h2></div><p>Prix indicatifs, ajustés selon le menu choisi. Le devis détaillé vous est envoyé sous 48 h.</p></div>
+  <div class="cfg">
+    <form id="cfg" onsubmit="return false">
+      <div class="stepb"><h3><i>1</i>Quel événement ?</h3><div class="chips">
+        <label class="chip"><input type="radio" name="ev" value="mariage" checked><span>Mariage<small>dégustation offerte</small></span></label>
+        <label class="chip"><input type="radio" name="ev" value="anniversaire"><span>Anniversaire<small>dès 20 invités</small></span></label>
+        <label class="chip"><input type="radio" name="ev" value="seminaire"><span>Séminaire<small>facture entreprise</small></span></label>
+        <label class="chip"><input type="radio" name="ev" value="entreprise"><span>Soirée d’entreprise<small>cocktail, gala</small></span></label></div></div>
+      <div class="stepb"><h3><i>2</i>Combien d’invités ?</h3><div class="stepper">
+        <button type="button" data-d="-10" aria-label="10 invités de moins">−</button><input name="n" type="number" min="10" max="400" value="100" aria-label="Nombre d’invités" inputmode="numeric"><button type="button" data-d="10" aria-label="10 invités de plus">+</button><span class="small">invités, de 10 à 400</span></div>
+        <p class="warn" id="warnN"></p></div>
+      <div class="stepb"><h3><i>3</i>Quel format ?</h3><div class="chips fmt">
+        <label class="chip"><input type="radio" name="fmt" value="cocktail" data-pp="34" data-min="20"><span><span style="background-image:url(../img/o-canapes.jpg)"></span><span><b>Cocktail dînatoire</b><small>18 pièces, debout</small></span><em>34 €</em></span></label>
+        <label class="chip"><input type="radio" name="fmt" value="repas" data-pp="52" data-min="20" checked><span><span style="background-image:url(../img/o-agneau.jpg)"></span><span><b>Repas assis</b><small>entrée, plat, dessert</small></span><em>52 €</em></span></label>
+        <label class="chip"><input type="radio" name="fmt" value="buffet" data-pp="28" data-min="20"><span><span style="background-image:url(../img/o-buffet.jpg)"></span><span><b>Buffet</b><small>chaud et froid</small></span><em>28 €</em></span></label>
+        <label class="chip"><input type="radio" name="fmt" value="plateaux" data-pp="21" data-min="10"><span><span style="background-image:url(../img/o-pains.jpg)"></span><span><b>Plateaux-repas</b><small>livrés, sans service</small></span><em>21 €</em></span></label></div></div>
+      <div class="stepb"><h3><i>4</i>Options</h3><div class="optl">
+        <label><input type="checkbox" name="opt" value="service" data-k="service" checked><span>Maîtres d’hôtel<small>1 pour 25 invités, 5 h · 175 € chacun</small></span></label>
+        <label><input type="checkbox" name="opt" value="boissons" data-k="pp" data-p="14"><span>Forfait boissons<small>vins, softs, eaux, café · 14 € / pers.</small></span></label>
+        <label><input type="checkbox" name="opt" value="vaisselle" data-k="pp" data-p="5" checked><span>Vaisselle et nappage<small>porcelaine, verrerie · 5 € / pers.</small></span></label>
+        <label><input type="checkbox" name="opt" value="gateau" data-k="pp" data-p="7"><span>Wedding cake ou pièce montée<small>7 € / part</small></span></label>
+        <label><input type="checkbox" name="opt" value="brunch" data-k="pp" data-p="26"><span>Brunch du lendemain<small>26 € / pers.</small></span></label>
+        <label><input type="checkbox" name="opt" value="livraison" data-k="fix" data-p="90"><span>Livraison au-delà de 30 km<small>forfait · 90 €</small></span></label></div></div>
+    </form>
+    <div>
+      <aside class="sum" aria-live="polite">
+        <div class="lbl" style="color:var(--copper)">Votre estimation</div>
+        <h3 id="sTitle">Mariage, 100 invités</h3>
+        <ul id="sLines"></ul>
+        <div class="tot"><span>Total estimé TTC</span><b id="sTot">—</b></div>
+        <div class="pp" id="sPP"></div>
+        <button class="btn" type="button" id="toSend">Recevoir le devis détaillé</button>
+        <p class="small">Estimation indicative. Prix TTC, hors frais de déplacement au-delà de 60 km.</p>
+      </aside>
+      <div class="send" id="send">
+        <h3 class="serif" style="font-size:24px">Vos coordonnées</h3><p class="small">Nous vous envoyons le devis détaillé et des propositions de menus.</p>
+        <form id="sendForm" novalidate>
+          <div class="f"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+          <div class="f"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+          <div class="f full"><label for="mail">E-mail</label><input id="mail" name="email" type="email" autocomplete="email" required></div>
+          <div class="f"><label for="date">Date</label><input id="date" name="date" type="date" required></div>
+          <div class="f"><label for="lieu">Lieu</label><input id="lieu" name="lieu" placeholder="Ville ou salle"></div>
+          <div class="f full"><label for="msg">Précisions</label><textarea id="msg" name="message" placeholder="Régimes particuliers, horaires, accès…"></textarea></div>
+          <label class="consent full"><input type="checkbox" required> J’accepte que mes informations servent à établir ce devis.</label>
+          <button class="btn d full" type="submit">Envoyer ma demande</button>
+        </form>
+      </div>
+      <div class="done" id="done" role="status"><h3>Demande envoyée</h3><p class="muted">Référence <b id="ref"></b>. Devis détaillé sous 48 h.</p><dl id="doneDl"></dl><p class="small">Maquette de démonstration : aucune donnée n’est envoyée.</p><button class="btn o" type="button" id="again" style="margin-top:12px">Nouvelle estimation</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="w" id="menus">
+  <div class="head"><div><div class="lbl">Menus de saison</div><h2>Trois menus, quatre saisons</h2></div><p>Exemples de menus. Tout est adaptable : végétarien, sans gluten, sans porc, menus enfants.</p></div>
+  <div class="seasons" role="tablist" aria-label="Saison">
+    <button role="tab" aria-selected="true" aria-controls="m-print">Printemps</button><button role="tab" aria-selected="false" aria-controls="m-ete">Été</button><button role="tab" aria-selected="false" aria-controls="m-aut">Automne</button><button role="tab" aria-selected="false" aria-controls="m-hiv">Hiver</button>
+    <label><input type="checkbox" id="al"> Afficher les allergènes</label>
+  </div>
+  <div class="menus" id="m-print" role="tabpanel">
+    <article class="menu"><h3>Cocktail</h3><div class="pr">34 € / pers.</div><ul><li>Asperges vertes, sabayon citron<small>œuf, lait</small></li><li>Tartelette chèvre frais et radis<small>gluten, lait</small></li><li>Ceviche de lieu jaune, fraises<small>poisson</small></li><li>Mini-brioche, effiloché d’agneau<small>gluten, œuf, lait</small></li><li>Choux praliné, fraises gariguettes<small>gluten, œuf, lait, fruits à coque</small></li></ul><button class="btn o" type="button" data-pick="cocktail">Choisir ce format</button></article>
+    <article class="menu"><h3>Repas assis</h3><div class="pr">52 € / pers.</div><ul><li>Velouté de petits pois, menthe<small>lait</small></li><li>Filet de bar, beurre blanc nantais<small>poisson, lait</small></li><li>Carré d’agneau, légumes nouveaux<small>—</small></li><li>Fraisier, crème légère vanille<small>gluten, œuf, lait</small></li></ul><button class="btn o" type="button" data-pick="repas">Choisir ce format</button></article>
+    <article class="menu"><h3>Buffet</h3><div class="pr">28 € / pers.</div><ul><li>Salade de lentilles, saumon fumé<small>poisson</small></li><li>Quiche asperges et comté<small>gluten, œuf, lait</small></li><li>Volaille rôtie, pommes grenaille<small>—</small></li><li>Tarte rhubarbe, crème crue<small>gluten, œuf, lait</small></li></ul><button class="btn o" type="button" data-pick="buffet">Choisir ce format</button></article>
+  </div>
+  <div class="menus" id="m-ete" role="tabpanel" hidden>
+    <article class="menu"><h3>Cocktail</h3><div class="pr">34 € / pers.</div><ul><li>Gaspacho tomate, basilic<small>—</small></li><li>Tartare de bœuf, câpres<small>moutarde</small></li><li>Brochette melon, jambon cru<small>—</small></li><li>Toast sardine, tomates confites<small>gluten, poisson</small></li><li>Verrine abricot, amande<small>lait, fruits à coque</small></li></ul><button class="btn o" type="button" data-pick="cocktail">Choisir ce format</button></article>
+    <article class="menu"><h3>Repas assis</h3><div class="pr">52 € / pers.</div><ul><li>Burrata, tomates anciennes<small>lait</small></li><li>Dos de cabillaud, aïoli et légumes<small>poisson, œuf</small></li><li>Suprême de volaille, ratatouille<small>—</small></li><li>Tarte fine aux pêches<small>gluten, lait</small></li></ul><button class="btn o" type="button" data-pick="repas">Choisir ce format</button></article>
+    <article class="menu"><h3>Buffet</h3><div class="pr">28 € / pers.</div><ul><li>Taboulé d’herbes, feta<small>gluten, lait</small></li><li>Rôti de porc froid, condiments<small>moutarde</small></li><li>Salade de pâtes, pesto<small>gluten, fruits à coque</small></li><li>Salade de fruits rouges<small>—</small></li></ul><button class="btn o" type="button" data-pick="buffet">Choisir ce format</button></article>
+  </div>
+  <div class="menus" id="m-aut" role="tabpanel" hidden>
+    <article class="menu"><h3>Cocktail</h3><div class="pr">34 € / pers.</div><ul><li>Velouté de potimarron<small>lait</small></li><li>Toast champignons, noisette<small>gluten, fruits à coque</small></li><li>Huître pochée, beurre blanc<small>mollusques, lait</small></li><li>Mini-burger canard<small>gluten, œuf</small></li><li>Tatin de poire<small>gluten, lait</small></li></ul><button class="btn o" type="button" data-pick="cocktail">Choisir ce format</button></article>
+    <article class="menu"><h3>Repas assis</h3><div class="pr">52 € / pers.</div><ul><li>Œuf parfait, crème de cèpes<small>œuf, lait</small></li><li>Merlu, choux et lard<small>poisson</small></li><li>Joue de bœuf, purée de céleri<small>céleri, lait</small></li><li>Moelleux chocolat, poire<small>gluten, œuf, lait</small></li></ul><button class="btn o" type="button" data-pick="repas">Choisir ce format</button></article>
+    <article class="menu"><h3>Buffet</h3><div class="pr">28 € / pers.</div><ul><li>Terrine de campagne, pickles<small>moutarde</small></li><li>Gratin de courge, sauge<small>lait</small></li><li>Poulet rôti, jus corsé<small>—</small></li><li>Crumble pomme-coing<small>gluten, lait</small></li></ul><button class="btn o" type="button" data-pick="buffet">Choisir ce format</button></article>
+  </div>
+  <div class="menus" id="m-hiv" role="tabpanel" hidden>
+    <article class="menu"><h3>Cocktail</h3><div class="pr">34 € / pers.</div><ul><li>Crème de topinambour<small>lait</small></li><li>Saumon gravlax, blinis<small>poisson, gluten, œuf</small></li><li>Feuilleté boudin blanc<small>gluten, lait</small></li><li>Croque truffé<small>gluten, lait</small></li><li>Truffe chocolat<small>lait</small></li></ul><button class="btn o" type="button" data-pick="cocktail">Choisir ce format</button></article>
+    <article class="menu"><h3>Repas assis</h3><div class="pr">52 € / pers.</div><ul><li>Saint-Jacques, fondue de poireaux<small>mollusques, lait</small></li><li>Filet de canette, panais<small>—</small></li><li>Fromages affinés<small>lait</small></li><li>Bûche clémentine, chocolat<small>gluten, œuf, lait</small></li></ul><button class="btn o" type="button" data-pick="repas">Choisir ce format</button></article>
+    <article class="menu"><h3>Buffet</h3><div class="pr">28 € / pers.</div><ul><li>Velouté de légumes racines<small>céleri</small></li><li>Parmentier de canard<small>lait</small></li><li>Salade d’endives, noix<small>fruits à coque</small></li><li>Riz au lait, caramel beurre salé<small>lait</small></li></ul><button class="btn o" type="button" data-pick="buffet">Choisir ce format</button></article>
+  </div>
+</section>
+
+<section class="w" id="entreprises">
+  <div class="head"><div><div class="lbl">Entreprises</div><h2>Plateaux-repas livrés au bureau</h2></div><p>Commande dès 6 plateaux, la veille avant 14 h. Facture entreprise, livraison offerte dans Nantes.</p></div>
+  <div class="ent">
+    <div class="img" style="background-image:url(../img/o-grazing.jpg)"></div>
+    <div class="trays">
+      <div class="tray" data-p="19"><div><b>Plateau du marché</b><small>Entrée, plat froid, fromage, dessert</small></div><div class="q"><button type="button" data-q="-1" aria-label="Retirer un plateau du marché">−</button><output>0</output><button type="button" data-q="1" aria-label="Ajouter un plateau du marché">+</button></div><em>19 €</em></div>
+      <div class="tray" data-p="19"><div><b>Plateau végétarien</b><small>Taboulé, tarte de légumes, fromage, fruit</small></div><div class="q"><button type="button" data-q="-1" aria-label="Retirer un plateau végétarien">−</button><output>0</output><button type="button" data-q="1" aria-label="Ajouter un plateau végétarien">+</button></div><em>19 €</em></div>
+      <div class="tray" data-p="24"><div><b>Plateau de la mer</b><small>Rillettes de poisson, saumon, salade, dessert</small></div><div class="q"><button type="button" data-q="-1" aria-label="Retirer un plateau de la mer">−</button><output>0</output><button type="button" data-q="1" aria-label="Ajouter un plateau de la mer">+</button></div><em>24 €</em></div>
+      <div class="tray" data-p="9"><div><b>Petit-déjeuner d’accueil</b><small>Viennoiseries, jus, café, fruits</small></div><div class="q"><button type="button" data-q="-1" aria-label="Retirer un petit-déjeuner">−</button><output>0</output><button type="button" data-q="1" aria-label="Ajouter un petit-déjeuner">+</button></div><em>9 €</em></div>
+      <form class="row" id="trayForm" novalidate>
+        <div class="f"><label for="tdate">Livraison le</label><input id="tdate" type="date" required></div>
+        <div><div class="small" style="color:#B9B3A2">Total TTC</div><div class="tt" id="tt">0 €</div></div>
+        <button class="btn" type="submit">Commander</button>
+      </form>
+      <div class="ok" id="trayOk" role="status"></div>
+    </div>
+  </div>
+</section>
+
+<section class="w" id="realisations">
+  <div class="head"><div><div class="lbl">Réalisations</div><h2>Quelques réceptions</h2></div><p>Cliquez pour agrandir. Photographies d’illustration.</p></div>
+  <div class="gal">
+    <figure class="t" data-full="../img/o-chandelles.jpg" style="background-image:url(../img/o-chandelles.jpg)"><figcaption><b>Dîner aux chandelles</b>Mariage · 110 invités</figcaption></figure>
+    <figure class="l" data-full="../img/o-planche.jpg" style="background-image:url(../img/o-planche.jpg)"><figcaption><b>Planches à partager</b>Anniversaire · 40 invités</figcaption></figure>
+    <figure data-full="../img/o-sauce.jpg" style="background-image:url(../img/o-sauce.jpg)"><figcaption><b>Service à l’assiette</b>Gala · 180 invités</figcaption></figure>
+    <figure data-full="../img/o-champagne.jpg" style="background-image:url(../img/o-champagne.jpg)"><figcaption><b>Vin d’honneur</b>Mariage · 150 invités</figcaption></figure>
+    <figure class="t" data-full="../img/o-exterieur.jpg" style="background-image:url(../img/o-exterieur.jpg)"><figcaption><b>Buffet en terrasse</b>Séminaire · 60 personnes</figcaption></figure>
+    <figure data-full="../img/o-piques.jpg" style="background-image:url(../img/o-piques.jpg)"><figcaption><b>Pièces cocktail</b>Inauguration · 200 invités</figcaption></figure>
+    <figure data-full="../img/o-entree.jpg" style="background-image:url(../img/o-entree.jpg)"><figcaption><b>Entrée de saison</b>Mariage · 90 invités</figcaption></figure>
+    <figure class="l" data-full="../img/o-bouchees.jpg" style="background-image:url(../img/o-bouchees.jpg)"><figcaption><b>Buffet cocktail</b>Soirée d’entreprise · 250 invités</figcaption></figure>
+  </div>
+</section>
+
+<section class="w" style="padding-top:20px">
+  <div class="head"><div><div class="lbl">Comment ça marche</div><h2>De la demande au jour J</h2></div></div>
+  <div class="how">
+    <div><i>1</i><h3>Estimation en ligne</h3><p>Composez votre réception ci-dessus, devis détaillé sous 48 h.</p></div>
+    <div><i>2</i><h3>Dégustation</h3><p>Offerte pour 4 personnes pour un mariage, à notre atelier.</p></div>
+    <div><i>3</i><h3>Menu validé</h3><p>Un mois avant ; nombre d’invités définitif dix jours avant.</p></div>
+    <div><i>4</i><h3>Le jour J</h3><p>Livraison, installation, service, puis débarrassage de la vaisselle.</p></div>
+  </div>
+  <div class="faq"><div><div class="lbl">Questions fréquentes</div><h2>Avant de commander</h2></div>
+    <div>
+      <details><summary>Combien de temps à l’avance faut-il réserver ?</summary><p>6 à 12 mois pour un mariage en été, deux à trois semaines pour un séminaire, la veille avant 14 h pour les plateaux-repas.</p></details>
+      <details><summary>Gérez-vous les allergies et régimes particuliers ?</summary><p>Oui. Les allergènes sont indiqués sur chaque menu ; précisez les régimes dans votre demande.</p></details>
+      <details><summary>Y a-t-il un minimum d’invités ?</summary><p>20 invités pour le cocktail, le repas et le buffet ; 6 plateaux pour la livraison au bureau.</p></details>
+      <details><summary>Quel acompte demandez-vous ?</summary><p>30 % à la confirmation, le solde après l’événement, sur facture.</p></details>
+      <details><summary>Que deviennent les restes ?</summary><p>Nous vous les laissons en barquettes si vous le souhaitez, dans le respect des règles d’hygiène.</p></details>
+    </div></div>
+</section>
+
+<section class="w" id="contact">
+  <div class="head"><div><div class="lbl">Contact</div><h2>L’atelier, à Nantes</h2></div><p>Dégustations le samedi sur rendez-vous.</p></div>
+  <div class="ct">
+    <div><h3>Adresse</h3><p><span class="ph">[Adresse de l’atelier]</span><br>44000 Nantes</p></div>
+    <div><h3>Horaires</h3><p>Du lundi au vendredi, 9 h – 18 h.<br>Samedi : dégustations sur rendez-vous.</p></div>
+    <div><h3>Nous joindre</h3><a href="tel:+33000000000"><span class="ph">[02 00 00 00 00]</span></a><a href="mailto:bonjour@oree-exemple.fr"><span class="ph">[bonjour@nom-du-traiteur.fr]</span></a><a href="#" data-demo="Lien vers le compte Instagram à renseigner"><span class="ph">[@compte-instagram]</span></a></div>
+  </div>
+</section>
+</main>
+<footer class="w"><span>© <span data-year></span> Orée · <details><summary>Mentions légales</summary><p>Orée, <span class="ph">[forme juridique]</span>, SIRET <span class="ph">[000 000 000 00000]</span>. Hébergeur : <span class="ph">[nom et adresse]</span>. Les informations des formulaires servent uniquement à établir vos devis et commandes. Photos : Unsplash.</p></details></span><span>Maquette — traiteur fictif, prix et menus illustratifs</span></footer>
+<div class="mbar"><a class="btn oc" href="tel:+33000000000" aria-label="Appeler">Appeler</a><a class="btn" href="#devis">Composer mon devis</a></div>
+
+<script src="../kit/std.js"></script>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const eur = n => Math.round(n).toLocaleString('fr-FR') + ' €';
+  const toast = m => { const t = $('.toast') || Object.assign(document.createElement('div'), { className: 'toast' }); t.textContent = m; document.body.append(t); requestAnimationFrame(() => t.classList.add('on')); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2400); };
+  const EV = { mariage: 'Mariage', anniversaire: 'Anniversaire', seminaire: 'Séminaire', entreprise: 'Soirée d’entreprise' };
+  const cfg = $('#cfg');
+
+  // lien actif dans le menu
+  const links = $$('header nav a'), secs = links.map(a => $(a.getAttribute('href')));
+  addEventListener('scroll', () => { const y = scrollY + 120; let c = -1; secs.forEach((s, i) => { if (s.offsetTop <= y) c = i; }); links.forEach((a, i) => a.classList.toggle('on', i === c)); }, { passive: true });
+
+  // configurateur
+  function calc() {
+    const n = Math.min(400, Math.max(10, +cfg.n.value || 0));
+    const fmt = cfg.querySelector('[name=fmt]:checked'), ev = cfg.ev.value;
+    const lines = [];
+    const pp = +fmt.dataset.pp;
+    lines.push([fmt.closest('.chip').querySelector('b').textContent + ' · ' + n + ' × ' + pp + ' €', n * pp]);
+    // plateaux livrés : pas de service ni de vaisselle
+    const noService = fmt.value === 'plateaux';
+    $$('[name=opt]', cfg).forEach(o => {
+      const lock = noService && (o.value === 'service' || o.value === 'vaisselle');
+      o.disabled = lock; if (lock) o.checked = false;
+      if (!o.checked) return;
+      const name = o.nextElementSibling.firstChild.textContent.trim();
+      if (o.dataset.k === 'service') { const k = Math.ceil(n / 25); lines.push([name + ' · ' + k + ' × 175 €', k * 175]); }
+      else if (o.dataset.k === 'pp') lines.push([name + ' · ' + n + ' × ' + o.dataset.p + ' €', n * o.dataset.p]);
+      else lines.push([name, +o.dataset.p]);
+    });
+    const tot = lines.reduce((s, l) => s + l[1], 0);
+    $('#sTitle').textContent = `${EV[ev]}, ${n} invités`;
+    $('#sLines').innerHTML = lines.map(l => `<li><span>${l[0]}</span><b>${eur(l[1])}</b></li>`).join('');
+    $('#sTot').textContent = eur(tot);
+    $('#sPP').textContent = 'soit ' + (tot / n).toLocaleString('fr-FR', { maximumFractionDigits: 2 }) + ' € par invité';
+    const min = +fmt.dataset.min, w = $('#warnN');
+    w.textContent = n < min ? `Minimum ${min} invités pour ce format : le devis sera établi sur ${min} invités.` : '';
+    w.classList.toggle('on', n < min);
+    return { n, ev: EV[ev], fmt: fmt.closest('.chip').querySelector('b').textContent, tot, lines };
+  }
+  cfg.addEventListener('input', calc); cfg.addEventListener('change', calc);
+  $$('[data-d]').forEach(b => b.addEventListener('click', () => { cfg.n.value = Math.min(400, Math.max(10, (+cfg.n.value || 0) + +b.dataset.d)); calc(); }));
+  calc();
+
+  // raccourcis : boutons du haut et « Choisir ce format »
+  $$('[data-ev]').forEach(b => b.addEventListener('click', () => {
+    cfg.querySelector(`[name=ev][value=${b.dataset.ev}]`).checked = true;
+    if (b.dataset.ev === 'seminaire') cfg.querySelector('[name=fmt][value=buffet]').checked = true;
+    if (b.dataset.ev === 'entreprise' || b.dataset.ev === 'anniversaire') cfg.querySelector('[name=fmt][value=cocktail]').checked = true;
+    if (b.dataset.ev === 'mariage') cfg.querySelector('[name=fmt][value=repas]').checked = true;
+    calc(); $('#devis').scrollIntoView({ behavior: 'smooth' });
+  }));
+  $$('[data-pick]').forEach(b => b.addEventListener('click', () => {
+    cfg.querySelector(`[name=fmt][value=${b.dataset.pick}]`).checked = true; calc();
+    $('#devis').scrollIntoView({ behavior: 'smooth' }); toast('Format « ' + b.closest('.menu').querySelector('h3').textContent + ' » sélectionné');
+  }));
+
+  // envoi du devis
+  $('#toSend').addEventListener('click', () => { $('#send').classList.add('on'); $('#send').scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => $('#nom').focus({ preventScroll: true }), 400); });
+  $('#sendForm').addEventListener('submit', e => {
+    e.preventDefault(); const f = e.target; if (!f.reportValidity()) return;
+    const r = calc();
+    $('#ref').textContent = 'OR-' + Date.now().toString().slice(-6);
+    const rows = [['Événement', r.ev], ['Invités', r.n], ['Format', r.fmt], ['Estimation', eur(r.tot) + ' TTC'], ['Nom', f.nom.value], ['Date', new Date(f.date.value + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })]];
+    if (f.lieu.value) rows.push(['Lieu', f.lieu.value]);
+    const dl = $('#doneDl'); dl.innerHTML = '';
+    rows.forEach(([k, v]) => { const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = k; dd.textContent = v; dl.append(dt, dd); });
+    $('#send').classList.remove('on'); $('.sum').hidden = true; $('#done').classList.add('on'); $('#done').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+  $('#again').addEventListener('click', () => { $('#done').classList.remove('on'); $('.sum').hidden = false; $('#sendForm').reset(); });
+
+  // menus : saisons et allergènes
+  const st = $$('.seasons [role=tab]');
+  st.forEach(t => t.addEventListener('click', () => st.forEach(x => { x.setAttribute('aria-selected', x === t); document.getElementById(x.getAttribute('aria-controls')).hidden = x !== t; })));
+  $('#al').addEventListener('change', e => $('#menus').classList.toggle('show-al', e.target.checked));
+
+  // plateaux-repas
+  const trays = $$('.tray');
+  const ttl = () => { const t = trays.reduce((s, tr) => s + tr.dataset.p * +$('output', tr).value, 0); $('#tt').textContent = eur(t); return t; };
+  trays.forEach(tr => $$('[data-q]', tr).forEach(b => b.addEventListener('click', () => { const o = $('output', tr); o.value = Math.max(0, +o.value + +b.dataset.q); ttl(); })));
+  const tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0, 10); $('#tdate').min = tomorrow;
+  $('#trayForm').addEventListener('submit', e => {
+    e.preventDefault(); const n = trays.reduce((s, tr) => s + +$('output', tr).value, 0), ok = $('#trayOk');
+    if (n < 6) { toast('Minimum 6 plateaux par commande'); return; }
+    if (!e.target.reportValidity()) return;
+    const d = new Date($('#tdate').value + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+    ok.textContent = `Commande enregistrée : ${n} plateaux, ${$('#tt').textContent} TTC, livraison le ${d}. (Maquette : rien n’est envoyé.)`;
+    ok.classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>

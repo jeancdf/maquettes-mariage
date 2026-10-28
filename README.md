@@ -1,19 +1,28 @@
-# Maquettes — prestataires de mariage et d’événementiel
+# Maquettes — mariage et événementiel
 
 Maquettes de sites vitrines à présenter aux prospects : https://jeancdf.github.io/maquettes-mariage/
 
-- `index.html` : les modèles, avec un aperçu et un lien vers chaque page.
-- `comparer.html` : bascule rapide entre les formules (boutons, touches 1 à 5, flèches ←/→, ancres `#essentiel`, `#complet`, `#alba`…).
+Cinq métiers, chacun avec ses trois formules. Tous les boutons, menus et formulaires fonctionnent ; les formulaires affichent un récapitulatif mais n’envoient rien.
 
-| Page | Modèle |
-| --- | --- |
-| `essentiel.html` | Maison Joséphine — Formule Essentiel |
-| `complet.html` | Maison Joséphine — Formule Complet |
-| `alba.html` | Studio Alba — photographe de mariage, Lyon |
-| `tilleuls.html` | Domaine des Tilleuls — lieu de réception, Anjou |
-| `nocturne.html` | Nocturne — DJ mariage, Marseille |
+| Métier | Essentiel (690 € HT) | Complet (1 190 € HT) | Sur mesure (1 990 à 2 990 € HT) |
+| --- | --- | --- | --- |
+| Wedding planner | `planner/essentiel.html` — Maison Joséphine | `planner/complet/` | `planner/sillage.html` — Sillage, lacs alpins |
+| Photographe | `photographe/essentiel.html` — Studio Héliotrope | `photographe/complet/` | `photographe/alba.html` — Studio Alba, Lyon |
+| Lieu de réception | `lieu/essentiel.html` — La Grange des Aulnes | `lieu/complet/` | `lieu/tilleuls.html` — Domaine des Tilleuls, Anjou |
+| DJ et animation | `dj/essentiel.html` — Sonar Events | `dj/complet/` | `dj/nocturne.html` — Nocturne, Provence |
+| Traiteur | `traiteur/essentiel.html` — Maison Garance | `traiteur/complet/` | `traiteur/oree.html` — Orée, Nantes |
 
-Essentiel (690 € HT) et Complet (1 190 € HT) utilisent le même établissement fictif pour comparer les gammes. Sur mesure : 1 990 à 2 990 € HT.
+- **Essentiel** : une page (formules et prix, infos pratiques, formulaire de demande).
+- **Complet** : cinq pages — `index.html`, `prestations.html`, `realisations.html`, `a-propos.html`, `contact.html` — plus `mentions-legales.html`. Vérification de date (ou estimation pour le traiteur) qui pré-remplit le formulaire de contact, galerie filtrable avec visionneuse, FAQ, menu mobile.
+- **Sur mesure** : identité et parcours propres (simulateur de budget, configurateur de devis, calendrier des dates libres…).
 
-Établissements fictifs : tarifs et cartes indicatifs, coordonnées entre crochets à personnaliser.
+Pages utiles :
+
+- `index.html` : tous les modèles, par métier.
+- `comparer.html` : bascule rapide (formule : boutons ou touches 1 à 3 ; métier : boutons ou flèches ←/→ ; ancres `#traiteur-complet`, `#dj-sur-mesure`…).
+- `kit/std.css`, `kit/std.js` : socle commun des formules Essentiel et Complet. `kit/bespoke.js` : rend fonctionnelles les maquettes sur mesure dessinées en deux versions (Alba, Tilleuls, Nocturne).
+
+Les anciennes adresses (`essentiel.html`, `complet.html`, `alba.html`, `tilleuls.html`, `nocturne.html`) redirigent vers les nouvelles.
+
+Établissements fictifs : tarifs, menus et informations illustratifs, coordonnées entre crochets à personnaliser.
 Photographies : [Unsplash](https://unsplash.com) (licence Unsplash), utilisées à titre d’illustration.
