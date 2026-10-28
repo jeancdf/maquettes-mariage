@@ -4,7 +4,7 @@ Maquettes de sites vitrines à présenter aux prospects : https://jeancdf.github
 
 Cinq métiers, chacun avec ses trois formules. Tous les boutons, menus et formulaires fonctionnent ; les formulaires affichent un récapitulatif mais n’envoient rien.
 
-| Métier | Essentiel (690 € HT) | Complet (1 190 € HT) | Sur mesure (1 990 à 2 990 € HT) |
+| Métier | Essentiel (790 € HT) | Complet (1 190 € HT) | Sur mesure (1 990 à 2 990 € HT) |
 | --- | --- | --- | --- |
 | Wedding planner | `planner/essentiel.html` — Maison Joséphine | `planner/complet/` | `planner/sillage.html` — Sillage, lacs alpins |
 | Photographe | `photographe/essentiel.html` — Studio Héliotrope | `photographe/complet/` | `photographe/alba.html` — Studio Alba, Lyon |
