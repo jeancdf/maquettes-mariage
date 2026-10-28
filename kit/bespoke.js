@@ -5,6 +5,7 @@
   const B = document.body.dataset;
   const ACC = B.accent || '#222', TEL = B.tel || '+33000000000', MAIL = B.mail || 'contact@exemple.fr', NAME = B.name || document.title.split(' — ')[0];
   const fmtDate = v => v ? new Date(v + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  const FONT = getComputedStyle(document.querySelector('.mb') || document.body).fontFamily;
   const isMob = () => getComputedStyle($('.mb')).display !== 'none';
   const root = () => isMob() ? $('.mb') : $('.dk');
 
@@ -18,7 +19,7 @@
   .bk-in:focus{outline:none;box-shadow:0 1px 0 0 currentColor}
   .btn[role=button],.cal .d span:not(.full),.burger,.call,.links span,.pl{cursor:pointer}
   .cal .d span.sel{outline:2px solid ${ACC};outline-offset:2px}
-  .bk-ov{position:fixed;inset:0;z-index:200;background:rgba(12,12,12,.55);display:none;align-items:center;justify-content:center;padding:16px;font-family:inherit}
+  .bk-ov{position:fixed;inset:0;z-index:200;background:rgba(12,12,12,.55);display:none;align-items:center;justify-content:center;padding:16px;font-family:${FONT}}
   .bk-ov.on{display:flex}
   .bk-dl{background:#fff;color:#1d1d1b;width:min(520px,100%);max-height:calc(100vh - 32px);overflow:auto;border-radius:10px;padding:28px 26px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.3);font-size:15.5px;line-height:1.55}
   .bk-dl h3{font-size:24px;line-height:1.2;margin:0 34px 6px 0}
@@ -35,12 +36,12 @@
   .bk-dl button.go,.bk-dl a.go{display:flex;justify-content:center;align-items:center;width:100%;border:0;border-radius:6px;background:${ACC};color:#fff;font:inherit;font-weight:700;padding:14px;cursor:pointer;margin-top:6px;text-decoration:none}
   .bk-dl .ok{border-left:4px solid ${ACC};padding-left:14px}
   .bk-dl .demo{font-size:12.5px;color:#8a8a84;margin-top:12px}
-  .bk-mn{position:fixed;inset:0;z-index:150;background:#fff;display:none;flex-direction:column;padding:84px 24px 30px;font-family:inherit}
+  .bk-mn{position:fixed;inset:0;z-index:150;background:#fff;display:none;flex-direction:column;padding:84px 24px 30px;font-family:${FONT}}
   .bk-mn.on{display:flex}
   .bk-mn a{font-size:26px;padding:12px 0;border-bottom:1px solid #e6e4de;color:#1d1d1b;text-decoration:none}
   .bk-mn a.go{margin-top:22px;border:0;background:${ACC};color:#fff;text-align:center;border-radius:6px;font-size:17px;font-weight:700}
   .bk-mn .x{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid #ddd;background:#fff;font-size:22px;cursor:pointer}
-  .bk-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#1d1d1b;color:#fff;padding:11px 18px;border-radius:6px;font-size:14.5px;z-index:220;opacity:0;transition:opacity .25s;pointer-events:none;max-width:calc(100vw - 32px);text-align:center}
+  .bk-toast{font-family:${FONT};position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#1d1d1b;color:#fff;padding:11px 18px;border-radius:6px;font-size:14.5px;z-index:220;opacity:0;transition:opacity .25s;pointer-events:none;max-width:calc(100vw - 32px);text-align:center}
   .bk-toast.on{opacity:1}`;
   document.head.append(css);
 
