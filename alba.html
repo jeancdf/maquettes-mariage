@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Studio Alba — photographe de mariage, Lyon (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400..700&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--ink:#111111;--paper:#FFFFFF;--grey:#F1EFEB;--mut:#625E58;--line:#E2DED8;--taupe:#7D6450}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.dk .cap{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--mut)}
+.dk h2{font-family:'Gloock',serif;font-weight:400;font-size:56px;line-height:1.05;letter-spacing:-.01em}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:14.5px;padding:16px 26px;white-space:nowrap}
+.dk .btn.k{background:var(--ink);color:#fff}
+.dk .btn.w{background:#fff;color:var(--ink)}
+.dk .btn.l{border:1px solid currentColor;padding:15px 25px}
+.dk .ph{border-bottom:1px dashed #AFA9A1;color:var(--mut);white-space:nowrap}
+.dk .wrap{padding:0 80px}
+.dk .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px}
+.dk .sh h2{margin-top:14px}
+.dk .sh p{max-width:380px;color:var(--mut)}
+.dk header{display:flex;align-items:center;justify-content:space-between;padding:26px 80px}
+.dk .logo b{font-family:'Gloock';font-weight:400;font-size:30px;letter-spacing:.32em;display:block;line-height:1}
+.dk .logo small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.dk nav{display:flex;gap:34px;font-size:14.5px;font-weight:500}
+.dk .hero{position:relative;height:780px;margin:0 24px;background:url(img/a-voile.jpg) center 40%/cover}
+.dk .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.62) 100%)}
+.dk .hero .in{position:absolute;left:56px;bottom:56px;right:56px;z-index:1;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.dk .hero .cap{color:#E6E2DC}
+.dk .hero h1{font-family:'Gloock';font-weight:400;font-size:84px;line-height:1;margin:16px 0 18px;letter-spacing:-.01em}
+.dk .hero p{font-size:18.5px;max-width:560px;color:#EDEAE5}
+.dk .hero .ctas{display:flex;flex-direction:column;gap:10px}
+.dk .check{margin:0 24px;background:var(--ink);color:#fff;display:grid;grid-template-columns:1.1fr 1fr 1fr auto;align-items:stretch}
+.dk .check div{padding:22px 28px;border-right:1px solid #2E2E2E}
+.dk .check .cap{color:#A9A39B;display:block;margin-bottom:4px;font-size:10.5px}
+.dk .check b{font-family:'Gloock';font-weight:400;font-size:24px}
+.dk .check .btn{margin:14px;}
+.dk .gal{padding:120px 80px 110px}
+.dk .gg{display:grid;grid-template-columns:1.2fr .8fr 1fr;grid-template-rows:360px 360px;gap:16px}
+.dk .gg figure{position:relative;background-size:cover;background-position:center}
+.dk .gg .t{grid-row:span 2}
+.dk .gg figure::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.dk .gg figcaption{position:absolute;left:16px;bottom:14px;color:#fff;font-size:13.5px;z-index:1}
+.dk .gg figcaption b{font-family:'Gloock';font-weight:400;font-size:20px;display:block}
+.dk .tarifs{background:var(--grey);padding:110px 80px}
+.dk .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dk .tc{background:#fff;padding:34px 32px 30px;display:flex;flex-direction:column}
+.dk .tc.hl{background:var(--ink);color:#fff}
+.dk .tc .cap{color:inherit;opacity:.75}
+.dk .tc h3{font-family:'Gloock';font-weight:400;font-size:32px;margin:10px 0 4px}
+.dk .tc .pr{font-family:'Gloock';font-size:46px;line-height:1.1;margin:10px 0 18px}
+.dk .tc .pr small{font-family:'Instrument Sans';font-size:14px;opacity:.7}
+.dk .tc ul{list-style:none;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:8px;font-size:15.5px}
+.dk .tc.hl ul{border-color:#333}
+.dk .tc li::before{content:"— ";color:var(--taupe)}
+.dk .tc.hl li::before{color:#BFA98F}
+.dk .opts{margin-top:28px;display:flex;justify-content:space-between;border-top:1px solid #D8D3CC;padding-top:22px;font-size:15px;color:var(--mut)}
+.dk .opts b{color:var(--ink);font-weight:600}
+.dk .steps{padding:110px 80px}
+.dk .sg{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.dk .sg div{padding:26px 28px 0 0}
+.dk .sg i{font-style:normal;font-family:'Gloock';font-size:44px;line-height:1}
+.dk .sg h3{font-size:19px;font-weight:600;margin:16px 0 8px}
+.dk .sg p{font-size:15px;color:var(--mut)}
+.dk .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--ink);color:#fff}
+.dk .about .pic{min-height:640px;background:url(img/a-photographe.jpg) center 30%/cover}
+.dk .about .txt{padding:100px 90px;display:flex;flex-direction:column;justify-content:center}
+.dk .about .cap{color:#A9A39B}
+.dk .about h2{margin:16px 0 22px}
+.dk .about p{color:#D4CFC8;max-width:520px}
+.dk .about .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;border-top:1px solid #333;padding-top:22px}
+.dk .about .facts b{display:block;font-family:'Gloock';font-weight:400;font-size:26px}
+.dk .about .facts span{font-size:13.5px;color:#A9A39B}
+.dk .contact{padding:110px 80px;display:grid;grid-template-columns:.9fr 1.1fr;gap:72px}
+.dk .contact p{color:var(--mut)}
+.dk .contact dl{margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;font-size:15.5px}
+.dk .contact dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:600;padding-top:3px}
+.dk .form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dk .field{border-bottom:1px solid var(--ink);padding:14px 2px;font-size:15px;color:var(--mut)}
+.dk .field b{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);font-weight:600;margin-bottom:4px}
+.dk .form .full{grid-column:1/-1}
+.dk footer{border-top:1px solid var(--line);margin:0 80px;padding:30px 0 36px;display:flex;justify-content:space-between;font-size:13.5px;color:var(--mut)}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--bg:#FFFFFF;--fg:#111111;--soft:#3D3A36;--mut:#625E58;--line:#E2DED8;--accent:#111111;--onaccent:#fff;--panel:#fff;--btnbg:#111111;--btnfg:#fff;--stickybg:rgba(255,255,255,.97);--disp:"Gloock",serif;--dw:400;--body:"Instrument Sans",sans-serif;--emstyle:normal;--rad:0;--avr:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+.mb{color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.mb h2{font-family:var(--disp);font-weight:var(--dw);font-size:38px;line-height:1.08;margin-top:12px}
+.mb h2 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:.06em;padding:15px 18px;white-space:nowrap;border-radius:var(--rad)}
+.mb .btn.a{background:var(--btnbg);color:var(--btnfg)}
+.mb .btn.o{border:1px solid var(--fg);padding:14px 17px}
+.mb .ph{border-bottom:1px dashed var(--mut);color:var(--mut);white-space:nowrap}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.mb header .r{display:flex;gap:10px;align-items:center}
+.mb header .btn{padding:10px 14px;font-size:12.5px}
+.mb .burger{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:26px 0 0}
+.mb .hero h1{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1.05;margin:14px 0 14px}
+.mb .hero h1 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .hero p{color:var(--soft);font-size:16px}
+.mb .hero .img{height:330px;margin-top:24px;background-size:cover;background-position:center}
+.mb .book{margin:0 20px;border:1px solid var(--line);padding:16px;background:var(--panel);transform:translateY(-36px)}
+.mb .book .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin:10px 0 12px}
+.mb .book .f div{border:1px solid var(--line);padding:7px 10px}
+.mb .book .f b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px}
+.mb .book .note{font-size:12px;color:var(--mut);margin-top:10px}
+.mb .blk{padding:14px 20px 44px}
+.mb .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mb .row b{display:block;font-weight:500;font-size:15.5px;line-height:1.3}
+.mb .row small{display:block;color:var(--mut);font-size:13px}
+.mb .row .pr{font-family:var(--disp);font-size:18px;white-space:nowrap}
+.mb .illu{font-size:12px;color:var(--mut);margin-top:12px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:22px 20px 0}
+.mb .rail .c{flex:none;width:240px}
+.mb .rail .c .im{height:260px;background-size:cover;background-position:center}
+.mb .rail .c h3{font-family:var(--disp);font-weight:var(--dw);font-size:24px;margin-top:12px;line-height:1.1}
+.mb .rail .c p{font-size:13.5px;color:var(--mut);margin-top:4px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:20px}
+.mb .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.mb .dots i.on{width:20px;border-radius:6px;background:var(--accent)}
+.mb .mem{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:72px;height:72px;background-size:cover;background-position:center 30%;border-radius:var(--avr)}
+.mb .mem h3{font-family:var(--disp);font-weight:var(--dw);font-size:22px;line-height:1.1}
+.mb .mem p{font-size:13.5px;color:var(--mut)}
+.mb .today{margin-top:18px;border:1px solid var(--accent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:var(--disp);font-weight:var(--dw);font-size:20px;display:block;line-height:1.1}
+.mb .today span{font-size:13px;color:var(--soft)}
+.mb .today em{font-style:normal;background:var(--accent);color:var(--onaccent);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 9px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .map{margin-top:20px;height:220px;border:1px solid var(--line);overflow:hidden}
+.mb .map svg{width:100%;height:100%}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .final{padding:60px 20px 54px;text-align:center;border-top:1px solid var(--line)}
+.mb .final h2{font-size:40px}
+.mb .final p{color:var(--soft);margin:12px 0 22px}
+.mb footer{border-top:1px solid var(--line);padding:30px 20px 120px;color:var(--mut);font-size:13.5px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:18px 0;color:var(--fg)}
+.mb footer .sm{font-size:11.5px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:var(--stickybg);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+.mb .hero .img{height:420px}
+.mb #m-rail{background:#F1EFEB}
+.mb .tc{border:1px solid var(--line);padding:18px;margin-top:12px}
+.mb .tc.hl{background:#111;color:#fff;border-color:#111}
+.mb .tc b{display:block;font-family:Gloock;font-weight:400;font-size:24px}
+.mb .tc .pr{font-family:Gloock;font-size:34px;margin:4px 0 6px}
+.mb .tc small{font-size:13.5px;opacity:.75}
+
+.mb .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar{display:none}
+.mb .rail .c{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+<header>
+  <div class="logo"><b>ALBA</b><small>Photographe de mariage · Lyon</small></div>
+  <nav><a href="#mariages">Mariages</a><a href="#tarifs">Tarifs</a><a href="#deroule">Déroulé</a><a href="#a-propos">À propos</a><a href="#contact">Contact</a></nav>
+  <span class="btn k" style="padding:13px 22px">Vérifier ma date</span>
+</header>
+
+<section class="hero"><div class="in">
+  <div><span class="cap">Studio Alba · Lyon et Auvergne-Rhône-Alpes</span>
+    <h1>Photographe de mariage à Lyon</h1>
+    <p>Reportage complet de votre journée, des préparatifs à la soirée. Photos livrées en galerie privée sous 6 semaines.</p></div>
+  <div class="ctas"><span class="btn w">Vérifier la disponibilité de ma date</span><span class="btn l" style="color:#fff">Voir les tarifs</span></div>
+</div></section>
+<div class="check">
+  <div><span class="cap">Date du mariage</span><b>Samedi 12 juin 2027</b></div>
+  <div><span class="cap">Lieu</span><b>[Lieu de réception]</b></div>
+  <div><span class="cap">Formule</span><b>Journée complète</b></div>
+  <span class="btn w">Vérifier</span>
+</div>
+
+<section id="mariages" class="gal">
+  <div class="sh"><div><span class="cap">Mariages</span><h2>Derniers reportages</h2></div><p>Photographies d’illustration. Sur le site final : les mariages photographiés, avec l’accord des mariés.</p></div>
+  <div class="gg">
+    <figure class="t" style="background-image:url(img/a-fenetre.jpg)"><figcaption><b>Mariage à [lieu]</b>Préparatifs</figcaption></figure>
+    <figure style="background-image:url(img/a-mains.jpg)"><figcaption><b>Mariage à [lieu]</b>Cérémonie</figcaption></figure>
+    <figure style="background-image:url(img/a-robe.jpg)"><figcaption><b>Mariage à [lieu]</b>Séance couple</figcaption></figure>
+    <figure style="background-image:url(img/a-danse.jpg)"><figcaption><b>Mariage à [lieu]</b>Soirée</figcaption></figure>
+    <figure style="background-image:url(img/a-voile3.jpg)"><figcaption><b>Mariage à [lieu]</b>Sortie de cérémonie</figcaption></figure>
+  </div>
+</section>
+
+<section id="tarifs" class="tarifs">
+  <div class="sh"><div><span class="cap">Tarifs</span><h2>Trois formules de reportage</h2></div><p>Tarifs indicatifs, déplacements inclus dans le Rhône. Acompte de 30 % à la réservation.</p></div>
+  <div class="tg">
+    <div class="tc"><span class="cap">6 heures</span><h3>Cérémonie</h3><div class="pr">1 490 €</div>
+      <ul><li>Cérémonie, vin d’honneur, séance couple</li><li>Environ 400 photos retouchées</li><li>Galerie privée en ligne</li></ul></div>
+    <div class="tc hl"><span class="cap">10 heures</span><h3>Journée complète</h3><div class="pr">2 290 €</div>
+      <ul><li>Des préparatifs à l’ouverture du bal</li><li>Environ 700 photos retouchées</li><li>Galerie privée et clé USB</li></ul></div>
+    <div class="tc"><span class="cap">10 heures + album</span><h3>Journée et album</h3><div class="pr">2 890 €</div>
+      <ul><li>Formule journée complète</li><li>Album 30 × 30 cm, 60 pages</li><li>Mise en page validée avec vous</li></ul></div>
+  </div>
+  <div class="opts"><span><b>Options</b> · séance engagement 290 € · second photographe 590 € · heure supplémentaire 150 €</span><span>Hors Rhône : frais de déplacement sur devis</span></div>
+</section>
+
+<section id="deroule" class="steps">
+  <div class="sh"><div><span class="cap">Déroulé</span><h2>De la réservation à la livraison</h2></div></div>
+  <div class="sg">
+    <div><i>1</i><h3>Appel découverte</h3><p>On vérifie la date et on échange sur votre journée, en 30 minutes.</p></div>
+    <div><i>2</i><h3>Réservation</h3><p>Contrat signé en ligne et acompte de 30 % pour bloquer la date.</p></div>
+    <div><i>3</i><h3>Préparation</h3><p>Rendez-vous un mois avant pour caler le planning photo.</p></div>
+    <div><i>4</i><h3>Livraison</h3><p>Galerie privée sous 6 semaines, téléchargement en haute définition.</p></div>
+  </div>
+</section>
+
+<section id="a-propos" class="about">
+  <div class="pic"></div>
+  <div class="txt"><span class="cap">À propos</span><h2>Léa, photographe du studio</h2>
+    <p>Je photographie des mariages à Lyon et dans la région. Mon travail : un reportage discret, sans poses imposées, avec quelques portraits guidés pendant la séance couple.</p>
+    <div class="facts"><div><b>[XX]</b><span>mariages par an</span></div><div><b>Rhône</b><span>déplacements inclus</span></div><div><b>6 sem.</b><span>délai de livraison</span></div></div>
+    <p style="font-size:13px;margin-top:20px;color:#A9A39B">Prénom et portrait illustratifs.</p></div>
+</section>
+
+<section id="contact" class="contact">
+  <div><span class="cap">Contact</span><h2 style="margin-top:14px">Votre date est-elle libre ?</h2>
+    <p style="margin-top:16px">Envoyez votre date et votre lieu, réponse sous 48 h avec la disponibilité et un devis.</p>
+    <dl><dt>Studio</dt><dd><span class="ph">[Adresse], 69000 Lyon</span></dd><dt>Téléphone</dt><dd><span class="ph">[04 00 00 00 00]</span></dd><dt>E-mail</dt><dd><span class="ph">[bonjour@studio-alba.fr]</span></dd><dt>Zone</dt><dd>Lyon, Auvergne-Rhône-Alpes, toute la France sur devis</dd></dl></div>
+  <div class="form">
+    <div class="field"><b>Prénoms</b>Vos prénoms</div><div class="field"><b>E-mail</b>vous@exemple.fr</div>
+    <div class="field"><b>Date du mariage</b>jj / mm / aaaa</div><div class="field"><b>Lieu</b>Ville ou domaine</div>
+    <div class="field full"><b>Formule</b>Cérémonie · Journée complète · Journée et album</div>
+    <div class="field full" style="height:120px"><b>Votre journée</b>Nombre d’invités, horaires, envies…</div>
+    <span class="btn k full">Envoyer ma demande</span>
+  </div>
+</section>
+<footer><span>© Studio Alba · Mentions légales · Confidentialité</span><span>[@compte-instagram]</span><span>Maquette — entreprise fictive · informations illustratives</span></footer>
+
+</div>
+<div class="mb">
+
+<header id="mb-head"><span style="display:flex;flex-direction:column;line-height:1"><span style="font-family:Gloock;font-size:24px;letter-spacing:.3em">ALBA</span><span style="font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#625E58;margin-top:4px">Photographe de mariage</span></span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
+<section class="hero" id="mb-hero">
+  <div class="p"><div class="cap">Studio Alba · Lyon</div><h1>Photographe de mariage à Lyon</h1><p>Reportage complet de votre journée. Photos livrées sous 6 semaines en galerie privée.</p></div>
+  <div class="img" style="background-image:url(img/a-voile.jpg)"></div>
+  <div class="book"><div class="cap">Vérifier ma date</div><div class="f" style="grid-template-columns:1.4fr 1fr"><div><span class="cap">Date</span><b>12 juin 2027</b></div><div><span class="cap">Lieu</span><b>[Lieu]</b></div></div><span class="btn a">Vérifier la disponibilité</span><p class="note">Réponse sous 48 h avec un devis.</p></div>
+</section>
+<section class="blk" id="mb-sig"><div class="cap">Tarifs</div><h2>Trois formules de reportage</h2><div class="tc"><span class="cap">6 heures</span><b>Cérémonie</b><div class="pr">1 490 €</div><small>Environ 400 photos · galerie privée</small></div><div class="tc hl"><span class="cap" style="color:#BFB8AE">10 heures</span><b>Journée complète</b><div class="pr">2 290 €</div><small>Environ 700 photos · galerie et clé USB</small></div><div class="tc"><span class="cap">10 heures + album</span><b>Journée et album</b><div class="pr">2 890 €</div><small>Album 30 × 30 cm, 60 pages</small></div><p class="illu">Tarifs indicatifs. Acompte de 30 % à la réservation.</p></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">Mariages</div><h2>Derniers reportages</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/a-fenetre.jpg)"></div><h3>Mariage à [lieu]</h3><p>Préparatifs.</p></div><div class="c"><div class="im" style="background-image:url(img/a-mains.jpg)"></div><h3>Mariage à [lieu]</h3><p>Cérémonie.</p></div><div class="c"><div class="im" style="background-image:url(img/a-voile3.jpg)"></div><h3>Mariage à [lieu]</h3><p>Sortie de cérémonie.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">À propos</div><h2>Léa, photographe du studio</h2><div style="margin-top:10px"><div class="mem"><div class="av" style="background-image:url(img/a-photographe.jpg)"></div><div><h3>Léa</h3><span class="cap" style="color:var(--accent)">Photographe</span><p>Reportage discret, quelques portraits guidés.</p></div></div></div><div style="margin-top:20px"><div class="row"><div><b>Appel découverte</b><small>30 minutes, date et envies</small></div><span class="pr">1</span></div><div class="row"><div><b>Réservation</b><small>contrat en ligne et acompte</small></div><span class="pr">2</span></div><div class="row"><div><b>Préparation</b><small>rendez-vous un mois avant</small></div><span class="pr">3</span></div><div class="row"><div><b>Livraison</b><small>galerie privée sous 6 semaines</small></div><span class="pr">4</span></div></div><p class="illu">Prénom et portrait illustratifs.</p></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Contact</div><h2>Votre date est-elle libre ?</h2><div class="row"><div><b>Studio</b><small><span class="ph">[Adresse], 69000 Lyon</span></small></div><span class="pr"></span></div><div class="row"><div><b>Zone</b><small>Lyon, Auvergne-Rhône-Alpes</small></div><span class="pr"></span></div><div class="row"><div><b>Téléphone</b><small><span class="ph">[04 00 00 00 00]</span></small></div><span class="pr"></span></div><div class="row"><div><b>E-mail</b><small><span class="ph">[bonjour@studio-alba.fr]</span></small></div><span class="pr"></span></div><div class="two"><span class="btn a">Écrire</span><span class="btn o">Appeler</span></div></section>
+<section class="final" id="mb-final"><div class="cap">Disponibilités 2027</div><h2>Réservez votre photographe</h2><p>Réponse sous 48 h avec un devis.</p><span class="btn a">Vérifier ma date</span></section>
+<footer id="mb-foot"><span style="display:flex;flex-direction:column;line-height:1"><span style="font-family:Gloock;font-size:24px;letter-spacing:.3em">ALBA</span><span style="font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#625E58;margin-top:4px">Photographe de mariage</span></span><p style="margin-top:10px">Photographe de mariage à Lyon et en Auvergne-Rhône-Alpes.</p><div class="links"><span>Mariages</span><span>Tarifs</span><span>Déroulé</span><span>À propos</span><span>Contact</span><span>Mentions légales</span></div><div class="sm"><span>[04 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Vérifier ma date</span></div>
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel (mobile)
+  const rail = document.querySelector('.mb [data-rail]');
+  const dots = [...document.querySelectorAll('.mb [data-dots] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>
